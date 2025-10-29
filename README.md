@@ -5,7 +5,7 @@ This is the official company website for Anaxiatech AB, hosted on GitHub Pages a
 ## 🌐 Live Site
 - **URL**: https://anaxiatech.se
 - **Hosted on**: GitHub Pages
-- **Custom Domain**: anaxiatech.se
+- **Custom Domain**: anaxiatech.se (configured in repository settings)
 
 ## 🏗️ Structure
 
@@ -16,7 +16,6 @@ This is the official company website for Anaxiatech AB, hosted on GitHub Pages a
 │   ├── css/main.css       # Website styles
 │   ├── js/main.js         # Website JavaScript
 │   └── images/            # Website images
-├── CNAME                  # Custom domain configuration
 └── _config.yml           # Jekyll configuration
 ```
 

@@ -45,9 +45,9 @@ Ensure these files exist in `assets/images/`:
 - `og-image.svg` - Social media preview image
 
 ## DNS & Hosting Configuration
-- **CNAME file**: Contains `anaxiatech.se` for custom domain
-- **DNS setup**: Uses GitHub Pages A records (185.199.108-111.153)
-- **Migration docs**: Comprehensive DNS migration guides in root directory
+- **Custom domain**: Configured in GitHub Pages repository settings (anaxiatech.se)
+- **DNS setup**: Handled at domain registrar with GitHub Pages A records
+- **SSL**: Automatically managed by GitHub Pages
 - **Jekyll config**: Minimal setup in `_config.yml` with company metadata
 
 ## Development Workflow
@@ -55,7 +55,7 @@ Ensure these files exist in `assets/images/`:
 2. **Asset management**: All resources in `assets/` directory with organized subdirectories
 3. **Content updates**: Modify sections directly in `index.html`
 4. **Style changes**: Update CSS custom properties for consistent theming
-5. **Domain changes**: Update CNAME file and DNS records per migration guides
+5. **Domain changes**: Configure through GitHub Pages repository settings
 
 ## Company Branding
 - **Colors**: Professional blue theme (#1a365d primary, #3182ce accent)
