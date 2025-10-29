@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="structureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a365d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3182ce;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Infrastructure representation -->
+  <g transform="translate(50,50)">
+    <!-- Harbor structure -->
+    <rect x="0" y="250" width="500" height="100" fill="#2d3748" opacity="0.8"/>
+    
+    <!-- Pillars -->
+    <rect x="80" y="180" width="20" height="70" fill="url(#structureGradient)"/>
+    <rect x="180" y="150" width="20" height="100" fill="url(#structureGradient)"/>
+    <rect x="280" y="160" width="20" height="90" fill="url(#structureGradient)"/>
+    <rect x="380" y="170" width="20" height="80" fill="url(#structureGradient)"/>
+    
+    <!-- AI Analysis overlay -->
+    <g opacity="0.7">
+      <!-- Scanning lines -->
+      <line x1="0" y1="200" x2="500" y2="200" stroke="#3182ce" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="0" y1="220" x2="500" y2="220" stroke="#3182ce" stroke-width="2" opacity="0.4">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.5s" repeatCount="indefinite"/>
+      </line>
+      
+      <!-- Detection points -->
+      <circle cx="90" cy="200" r="8" fill="#38a169" opacity="0.8">
+        <animate attributeName="r" values="5;12;5" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="290" cy="180" r="8" fill="#e53e3e" opacity="0.8">
+        <animate attributeName="r" values="5;12;5" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="390" cy="190" r="8" fill="#d69e2e" opacity="0.8">
+        <animate attributeName="r" values="5;12;5" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Data visualization -->
+    <g transform="translate(350,50)">
+      <!-- Chart background -->
+      <rect x="0" y="0" width="140" height="100" fill="white" stroke="#e2e8f0" stroke-width="1" rx="8"/>
+      <text x="70" y="15" text-anchor="middle" fill="#1a365d" font-family="Inter, sans-serif" font-size="10" font-weight="600">
+        AI Analysis
+      </text>
+      
+      <!-- Chart bars -->
+      <rect x="20" y="70" width="15" height="20" fill="#38a169"/>
+      <rect x="40" y="60" width="15" height="30" fill="#3182ce"/>
+      <rect x="60" y="75" width="15" height="15" fill="#e53e3e"/>
+      <rect x="80" y="65" width="15" height="25" fill="#d69e2e"/>
+      <rect x="100" y="55" width="15" height="35" fill="#3182ce"/>
+    </g>
+  </g>
+  
+  <!-- Title text -->
+  <text x="300" y="380" text-anchor="middle" fill="#1a365d" font-family="Inter, sans-serif" font-size="18" font-weight="600">
+    AI-Powered Infrastructure Analysis
+  </text>
+</svg>

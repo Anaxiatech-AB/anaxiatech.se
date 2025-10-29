@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a365d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3182ce;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="180" fill="url(#logoGradient)" />
+  
+  <!-- Main logo shape - representing AI/tech concept -->
+  <g transform="translate(200,200)">
+    <!-- Central core -->
+    <circle cx="0" cy="0" r="40" fill="white" opacity="0.9"/>
+    
+    <!-- Neural network nodes -->
+    <circle cx="-60" cy="-30" r="12" fill="white" opacity="0.8"/>
+    <circle cx="-60" cy="30" r="12" fill="white" opacity="0.8"/>
+    <circle cx="60" cy="-30" r="12" fill="white" opacity="0.8"/>
+    <circle cx="60" cy="30" r="12" fill="white" opacity="0.8"/>
+    <circle cx="0" cy="-70" r="12" fill="white" opacity="0.8"/>
+    <circle cx="0" cy="70" r="12" fill="white" opacity="0.8"/>
+    
+    <!-- Connection lines -->
+    <line x1="-48" y1="-30" x2="-28" y2="-15" stroke="white" stroke-width="2" opacity="0.6"/>
+    <line x1="-48" y1="30" x2="-28" y2="15" stroke="white" stroke-width="2" opacity="0.6"/>
+    <line x1="48" y1="-30" x2="28" y2="-15" stroke="white" stroke-width="2" opacity="0.6"/>
+    <line x1="48" y1="30" x2="28" y2="15" stroke="white" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="-58" x2="0" y2="-28" stroke="white" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="58" x2="0" y2="28" stroke="white" stroke-width="2" opacity="0.6"/>
+  </g>
+  
+  <!-- Company text -->
+  <text x="200" y="320" text-anchor="middle" fill="#1a365d" font-family="Inter, sans-serif" font-size="24" font-weight="600">
+    ANAXIATECH
+  </text>
+  <text x="200" y="345" text-anchor="middle" fill="#3182ce" font-family="Inter, sans-serif" font-size="14" font-weight="400">
+    AI Infrastructure Solutions
+  </text>
+</svg>

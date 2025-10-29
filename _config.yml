@@ -9,14 +9,14 @@ url: "https://anaxiatech.se"
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-feed
+- jekyll-feed
 
 # Exclude files
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+- Gemfile
+- Gemfile.lock
+- node_modules
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/

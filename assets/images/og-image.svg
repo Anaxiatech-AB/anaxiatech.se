@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a365d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3182ce;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogGradient)"/>
+  
+  <!-- Overlay pattern -->
+  <g opacity="0.1">
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="2" fill="white"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#dots)"/>
+  </g>
+  
+  <!-- Content -->
+  <g transform="translate(100,150)">
+    <!-- Logo -->
+    <circle cx="100" cy="100" r="80" fill="white" opacity="0.2"/>
+    <circle cx="100" cy="100" r="35" fill="white"/>
+    <circle cx="70" cy="80" r="8" fill="white" opacity="0.8"/>
+    <circle cx="130" cy="80" r="8" fill="white" opacity="0.8"/>
+    <circle cx="70" cy="120" r="8" fill="white" opacity="0.8"/>
+    <circle cx="130" cy="120" r="8" fill="white" opacity="0.8"/>
+    
+    <!-- Main text -->
+    <text x="250" y="80" fill="white" font-family="Inter, sans-serif" font-size="48" font-weight="700">
+      Anaxiatech AB
+    </text>
+    <text x="250" y="130" fill="white" font-family="Inter, sans-serif" font-size="24" font-weight="400" opacity="0.9">
+      AI-Powered Infrastructure Solutions
+    </text>
+    
+    <!-- Description -->
+    <text x="250" y="180" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="400" opacity="0.8">
+      Advanced crack detection and structural monitoring
+    </text>
+    <text x="250" y="210" fill="white" font-family="Inter, sans-serif" font-size="18" font-weight="400" opacity="0.8">
+      for harbors and marine infrastructure
+    </text>
+    
+    <!-- Bottom elements -->
+    <g transform="translate(0,280)">
+      <!-- Website URL -->
+      <rect x="250" y="0" width="300" height="50" fill="white" opacity="0.2" rx="25"/>
+      <text x="400" y="30" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="16" font-weight="500">
+        anaxiatech.se
+      </text>
+      
+      <!-- Key features -->
+      <g transform="translate(600,0)">
+        <text x="0" y="0" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="600" opacity="0.9">
+          ✓ Real-time Detection
+        </text>
+        <text x="0" y="25" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="600" opacity="0.9">
+          ✓ AI-Powered Analysis
+        </text>
+        <text x="0" y="50" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="600" opacity="0.9">
+          ✓ Professional Workflow
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
