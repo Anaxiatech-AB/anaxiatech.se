@@ -33,7 +33,7 @@ This is the official company website for Anaxiatech AB, hosted on GitHub Pages a
 The website expects these image files in `assets/images/`:
 - `logo.svg` - Company logo (400x400px)
 - `hero-diagram.svg` - Hero section illustration
-- `og-image.jpg` - OpenGraph social sharing image
+- `og-image.svg` - OpenGraph social sharing image
 
 ## 🚀 Development
 
