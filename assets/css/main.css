@@ -102,6 +102,7 @@ body {
     align-items: center;
     gap: 1rem;
     transition: transform 0.3s ease;
+    text-decoration: none !important;
 }
 
 .nav-logo:hover {
@@ -109,10 +110,17 @@ body {
 }
 
 .nav-logo img {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     filter: drop-shadow(0 0 10px rgba(139, 69, 19, 0.3));
     transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 4px;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .nav-logo:hover img {
@@ -124,11 +132,15 @@ body {
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: var(--text-primary);
-    text-decoration: none;
+    text-decoration: none !important;
     background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.nav-logo:hover .nav-brand {
+    text-decoration: none !important;
 }
 
 .nav-menu {
@@ -139,7 +151,7 @@ body {
 }
 
 .nav-link {
-    text-decoration: none;
+    text-decoration: none !important;
     color: var(--text-secondary);
     font-weight: 500;
     transition: all 0.3s ease;
@@ -148,10 +160,13 @@ body {
     position: relative;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
     color: var(--accent-light);
     background: rgba(49, 130, 206, 0.1);
     transform: translateY(-2px);
+    text-decoration: none !important;
 }
 
 /* Hero Section */
