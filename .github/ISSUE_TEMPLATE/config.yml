@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📧 Email Contact
+    url: mailto:theresia.lundgren@anaxiatech.se
+    about: For urgent matters or business inquiries, reach out via email
+  - name: 🐙 GitHub Organization
+    url: https://github.com/Anaxiatech-AB
+    about: Visit our GitHub organization for more projects and repositories
