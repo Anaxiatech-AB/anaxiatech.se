@@ -351,6 +351,34 @@ section {
     box-shadow: 0 0 10px rgba(139, 69, 19, 0.3);
 }
 
+.section-intro {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: -2rem auto 3rem;
+    line-height: 1.6;
+}
+
+.capability-tagline {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--accent-light);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.collaboration-note,
+.availability-note {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(139, 69, 19, 0.1);
+    border-left: 3px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
 /* Products Section */
 .products {
     background: var(--background-secondary);
@@ -637,6 +665,113 @@ section {
     margin-top: 2rem;
 }
 
+/* Project Highlight Styles */
+.project-highlight {
+    background: var(--background-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.project-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6);
+    border-color: var(--accent-color);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.project-logo {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(139, 69, 19, 0.3));
+}
+
+.project-header-text h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--accent-light), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-tagline {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.project-content {
+    position: relative;
+}
+
+.project-description h4 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--accent-light);
+    margin: 2rem 0 1rem;
+}
+
+.project-description h4:first-child {
+    margin-top: 0;
+}
+
+.project-description p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: var(--font-size-base);
+    margin-bottom: 1.5rem;
+}
+
+.project-description ul {
+    list-style: none;
+    margin: 1rem 0 2rem;
+    padding: 0;
+}
+
+.project-description ul li {
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.project-description ul li::before {
+    content: "▸";
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.project-description ul li strong {
+    color: var(--text-primary);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
 /* Technology Section */
 .technology {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -914,6 +1049,32 @@ section {
     outline: none;
     border-color: var(--accent-color);
     box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+/* Form Messages */
+.form-message {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.form-message--success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: rgb(34, 197, 94);
+}
+
+.form-message--error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: rgb(239, 68, 68);
+}
+
+.form-message--info {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: rgb(59, 130, 246);
 }
 
 /* Footer */
