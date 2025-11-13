@@ -61,7 +61,7 @@ jobs:
         username: ${{ secrets.SMTP_USERNAME }}
         password: ${{ secrets.SMTP_PASSWORD }}
         subject: "New Contact Form Submission - Anaxiatech"
-        to: heresia.lundgren@anaxiatech.se
+        to: theresia.lundgren@anaxiatech.se
         from: ${{ secrets.SMTP_USERNAME }}
         html_body: |
           <h2>New Contact Form Submission</h2>

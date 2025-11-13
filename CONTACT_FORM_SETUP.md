@@ -7,7 +7,7 @@ The contact form now uses GitHub Actions + Issues API for serverless form proces
 1. **Form Submission**: JavaScript submits form data to GitHub Issues API
 2. **GitHub Action**: Automatically triggered when new issue with 'contact-form' label is created
 3. **Spam Filter**: Basic keyword filtering on both client and server side
-4. **Email Notification**: Sends formatted email to heresia.lundgren@anaxiatech.se
+4. **Email Notification**: Sends formatted email to theresia.lundgren@anaxiatech.se
 5. **Issue Management**: Automatically closes and labels processed issues
 
 ## Setup Required
@@ -20,7 +20,7 @@ The contact form now uses GitHub Actions + Issues API for serverless form proces
 Add these secrets in GitHub repository settings (Settings > Secrets and variables > Actions):
 
 ```bash
-SMTP_USERNAME=heresia.lundgren@anaxiatech.se
+SMTP_USERNAME=theresia.lundgren@anaxiatech.se
 SMTP_PASSWORD=your-office365-password
 ```
 
@@ -46,7 +46,7 @@ The workflow is configured for Office 365. For other providers, update the workf
 ## Testing
 1. Submit a test message via the contact form
 2. Check Issues tab for new issue creation
-3. Verify email delivery to heresia.lundgren@anaxiatech.se
+3. Verify email delivery to theresia.lundgren@anaxiatech.se
 4. Issue should auto-close with "processed" label
 
 ## Spam Protection
