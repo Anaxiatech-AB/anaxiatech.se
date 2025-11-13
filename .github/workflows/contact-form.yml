@@ -24,32 +24,51 @@ jobs:
             body.toLowerCase().includes(keyword.toLowerCase())
           );
           
-          if (isSpam) {
+          // Check for multiple URLs
+          const urlMatches = body.match(/http[s]?:\/\/[^\s]+/g);
+          const hasMultipleUrls = urlMatches && urlMatches.length > 1;
+          
+          if (isSpam || hasMultipleUrls) {
             console.log('Spam detected, skipping email');
-            return { isSpam: true };
+            core.setOutput('isSpam', 'true');
+            return;
           }
           
           // Extract form data (assumes structured format)
           const lines = body.split('\n');
-          let formData = {};
+          let formData = {
+            name: 'Unknown',
+            email: 'unknown@example.com', 
+            company: 'Not specified',
+            message: body
+          };
           
           for (let line of lines) {
             if (line.includes('**Name:**')) {
-              formData.name = line.split('**Name:**')[1]?.trim();
+              const name = line.split('**Name:**')[1]?.trim();
+              if (name) formData.name = name;
             }
             if (line.includes('**Email:**')) {
-              formData.email = line.split('**Email:**')[1]?.trim();
+              const email = line.split('**Email:**')[1]?.trim();
+              if (email) formData.email = email;
             }
             if (line.includes('**Company:**')) {
-              formData.company = line.split('**Company:**')[1]?.trim();
+              const company = line.split('**Company:**')[1]?.trim();
+              if (company) formData.company = company;
             }
             if (line.includes('**Message:**')) {
               const messageStart = body.indexOf('**Message:**') + 12;
-              formData.message = body.substring(messageStart).trim();
+              const message = body.substring(messageStart).trim();
+              if (message) formData.message = message;
             }
           }
           
-          return { isSpam: false, formData };
+          // Set outputs
+          core.setOutput('isSpam', 'false');
+          core.setOutput('name', formData.name);
+          core.setOutput('email', formData.email);
+          core.setOutput('company', formData.company);
+          core.setOutput('message', formData.message);
 
     - name: Send Email Notification
       if: steps.parse.outputs.isSpam != 'true'
@@ -65,12 +84,12 @@ jobs:
         from: ${{ secrets.SMTP_USERNAME }}
         html_body: |
           <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${{ fromJson(steps.parse.outputs.result).formData.name }}</p>
-          <p><strong>Email:</strong> ${{ fromJson(steps.parse.outputs.result).formData.email }}</p>
-          <p><strong>Company:</strong> ${{ fromJson(steps.parse.outputs.result).formData.company }}</p>
+          <p><strong>Name:</strong> ${{ steps.parse.outputs.name }}</p>
+          <p><strong>Email:</strong> ${{ steps.parse.outputs.email }}</p>
+          <p><strong>Company:</strong> ${{ steps.parse.outputs.company }}</p>
           <p><strong>Message:</strong></p>
-          <div style="padding: 10px; background: #f5f5f5; border-radius: 5px;">
-            ${{ fromJson(steps.parse.outputs.result).formData.message }}
+          <div style="padding: 10px; background: #f5f5f5; border-radius: 5px; white-space: pre-wrap;">
+            ${{ steps.parse.outputs.message }}
           </div>
           <hr>
           <p><em>Submitted via anaxiatech.se contact form</em></p>

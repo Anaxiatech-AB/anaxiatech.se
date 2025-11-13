@@ -39,9 +39,22 @@ The workflow is configured for Office 365. For other providers, update the workf
 ## Security Features
 ✅ Client-side spam detection (keywords, multiple URLs)
 ✅ Server-side spam filtering in GitHub Action
-✅ Email validation and required field checking
+✅ Email validation and required field checking  
+✅ Field length limits (name/company: 100 chars, message: 2000 chars)
 ✅ Rate limiting via GitHub API limits
+✅ Enhanced error handling with specific user feedback
+✅ Network error detection and retry guidance
 ✅ No sensitive data stored in code
+
+## Error Handling
+The form now provides specific error messages for:
+- Network connectivity issues
+- Rate limiting (429 errors) 
+- Server errors (5xx)
+- Validation failures
+- Field length violations
+
+Users are guided to email directly if technical issues persist.
 
 ## Testing
 1. Submit a test message via the contact form

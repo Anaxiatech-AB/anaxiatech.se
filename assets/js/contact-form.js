@@ -16,15 +16,26 @@ class ContactForm {
         
         const formData = new FormData(this.form);
         const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            company: formData.get('company') || 'Not specified',
-            message: formData.get('message')
+            name: formData.get('name')?.trim(),
+            email: formData.get('email')?.trim(),
+            company: formData.get('company')?.trim() || 'Not specified',
+            message: formData.get('message')?.trim()
         };
 
         // Basic client-side validation
         if (!data.name || !data.email || !data.message) {
             this.showMessage('Please fill in all required fields.', 'error');
+            return;
+        }
+
+        // Field length validation
+        if (data.name.length > 100) {
+            this.showMessage('Name must be less than 100 characters.', 'error');
+            return;
+        }
+        
+        if (data.message.length > 2000) {
+            this.showMessage('Message must be less than 2000 characters.', 'error');
             return;
         }
 
@@ -75,12 +86,22 @@ class ContactForm {
             if (response.ok) {
                 this.showMessage('Message sent successfully! We\'ll get back to you soon.', 'success');
                 this.form.reset();
+            } else if (response.status === 429) {
+                throw new Error('Rate limit exceeded. Please try again in a few minutes.');
+            } else if (response.status >= 500) {
+                throw new Error('Server error. Please try again later.');
             } else {
-                throw new Error('Failed to submit form');
+                throw new Error('Failed to submit form. Please try again.');
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            this.showMessage('Sorry, there was an error sending your message. Please try emailing us directly.', 'error');
+            if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                this.showMessage('Network error. Please check your connection and try again.', 'error');
+            } else if (error.message.includes('Rate limit')) {
+                this.showMessage('Too many requests. Please try again in a few minutes.', 'error');
+            } else {
+                this.showMessage('Sorry, there was an error sending your message. Please try emailing us directly at theresia.lundgren@anaxiatech.se', 'error');
+            }
         } finally {
             this.setLoading(false);
         }
