@@ -19,21 +19,22 @@ The contact form now uses GitHub Actions + Issues API for serverless form proces
 ### 2. Email SMTP Secrets
 Add these secrets in GitHub repository settings (Settings > Secrets and variables > Actions):
 
-```
-SMTP_USERNAME=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
+```bash
+SMTP_USERNAME=heresia.lundgren@anaxiatech.se
+SMTP_PASSWORD=your-office365-password
 ```
 
-**For Gmail:**
-1. Enable 2FA on your Google account
-2. Generate App Password: Google Account > Security > App passwords
-3. Use the 16-character app password (not your regular password)
+**For Office 365/Azure:**
+1. Use your full email address as username
+2. Use your regular Office 365 password
+3. Ensure SMTP authentication is enabled in your Office 365 admin panel
+4. If using MFA, you may need to create an app password
 
 ### 3. Alternative SMTP Providers
-If not using Gmail, update the workflow file with your provider:
-- **Outlook**: smtp-mail.outlook.com, port 587
-- **SendGrid**: smtp.sendgrid.net, port 587
-- **Mailgun**: smtp.mailgun.org, port 587
+The workflow is configured for Office 365. For other providers, update the workflow file:
+- **Gmail**: smtp.gmail.com, port 465, SSL
+- **SendGrid**: smtp.sendgrid.net, port 587, TLS
+- **Mailgun**: smtp.mailgun.org, port 587, TLS
 
 ## Security Features
 ✅ Client-side spam detection (keywords, multiple URLs)

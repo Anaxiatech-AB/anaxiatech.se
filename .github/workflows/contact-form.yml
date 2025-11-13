@@ -55,8 +55,9 @@ jobs:
       if: steps.parse.outputs.isSpam != 'true'
       uses: dawidd6/action-send-mail@v3
       with:
-        server_address: smtp.gmail.com
-        server_port: 465
+        server_address: smtp.office365.com
+        server_port: 587
+        secure: true
         username: ${{ secrets.SMTP_USERNAME }}
         password: ${{ secrets.SMTP_PASSWORD }}
         subject: "New Contact Form Submission - Anaxiatech"
