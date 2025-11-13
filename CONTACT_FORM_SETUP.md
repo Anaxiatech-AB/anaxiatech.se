@@ -7,7 +7,7 @@ The contact form now uses GitHub Actions + Issues API for serverless form proces
 1. **Form Submission**: JavaScript submits form data to GitHub Issues API
 2. **GitHub Action**: Automatically triggered when new issue with 'contact-form' label is created
 3. **Spam Filter**: Basic keyword filtering on both client and server side
-4. **Email Notification**: Sends formatted email to theresia.lundgren@anaxiatech.se
+4. **Email Notification**: Sends formatted email to heresia.lundgren@anaxiatech.se
 5. **Issue Management**: Automatically closes and labels processed issues
 
 ## Setup Required
@@ -45,7 +45,7 @@ If not using Gmail, update the workflow file with your provider:
 ## Testing
 1. Submit a test message via the contact form
 2. Check Issues tab for new issue creation
-3. Verify email delivery to theresia.lundgren@anaxiatech.se
+3. Verify email delivery to heresia.lundgren@anaxiatech.se
 4. Issue should auto-close with "processed" label
 
 ## Spam Protection
