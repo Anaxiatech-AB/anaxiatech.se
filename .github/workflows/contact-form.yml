@@ -19,7 +19,7 @@ jobs:
           const body = issue.body;
           
           // Basic spam detection
-          const spamKeywords = ['crypto', 'bitcoin', 'loan', 'casino', 'viagra', 'pharmacy'];
+          const spamKeywords = ['crypto', 'bitcoin', 'blockchain', 'loan', 'credit', 'casino', 'gambling', 'viagra', 'pharmacy'];
           const isSpam = spamKeywords.some(keyword => 
             body.toLowerCase().includes(keyword.toLowerCase())
           );
