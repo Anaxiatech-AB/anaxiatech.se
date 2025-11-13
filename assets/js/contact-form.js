@@ -39,14 +39,17 @@ class ContactForm {
         const spamPatterns = [
             /crypto|bitcoin|blockchain/i,
             /loan|credit|casino|gambling/i,
-            /viagra|pharmacy|pills/i,
-            /http[s]?:\/\/[^\s]+/g // Multiple URLs
+            /viagra|pharmacy|pills/i
         ];
 
         const messageText = `${data.name} ${data.message}`.toLowerCase();
         const hasSpam = spamPatterns.some(pattern => pattern.test(messageText));
         
-        if (hasSpam) {
+        // Check for multiple URLs (more than 1 URL indicates potential spam)
+        const urlMatches = messageText.match(/http[s]?:\/\/[^\s]+/g);
+        const hasMultipleUrls = urlMatches && urlMatches.length > 1;
+        
+        if (hasSpam || hasMultipleUrls) {
             this.showMessage('Message appears to be spam and was blocked.', 'error');
             return;
         }
