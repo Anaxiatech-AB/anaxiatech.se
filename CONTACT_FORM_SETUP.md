@@ -64,7 +64,7 @@ Users are guided to email directly if technical issues persist.
 
 ## Spam Protection
 Blocked keywords: crypto, bitcoin, loan, casino, viagra, pharmacy
-Multiple URLs in message also trigger spam detection
+Any URL in message triggers spam detection
 
 ## Backup Plan
 If GitHub Actions fail, users can still email directly via the contact info section.
