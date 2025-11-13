@@ -68,39 +68,31 @@ class ContactForm {
         this.setLoading(true);
 
         try {
-            const issueBody = this.formatIssueBody(data);
+            // Use a mailto link as a fallback for now
+            // This ensures the form always works even if external services are down
+            const subject = encodeURIComponent(`Contact from ${data.name} - ${data.company}`);
+            const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\n\nMessage:\n${data.message}`);
+            const mailtoLink = `mailto:theresia.lundgren@anaxiatech.se?subject=${subject}&body=${body}`;
             
-            const response = await fetch('https://api.github.com/repos/Anaxiatech-AB/anaxiatech.se/issues', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/vnd.github.v3+json'
-                },
-                body: JSON.stringify({
-                    title: `Contact Form: ${data.name} - ${data.company}`,
-                    body: issueBody,
-                    labels: ['contact-form']
-                })
-            });
-
-            if (response.ok) {
-                this.showMessage('Message sent successfully! We\'ll get back to you soon.', 'success');
-                this.form.reset();
-            } else if (response.status === 429) {
-                throw new Error('Rate limit exceeded. Please try again in a few minutes.');
-            } else if (response.status >= 500) {
-                throw new Error('Server error. Please try again later.');
-            } else {
-                throw new Error('Failed to submit form. Please try again.');
-            }
+            // Open the user's email client
+            window.location.href = mailtoLink;
+            
+            this.showMessage('Opening your email client... Please send the message to complete your inquiry.', 'success');
+            this.form.reset();
         } catch (error) {
             console.error('Form submission error:', error);
-            if (error.name === 'TypeError' && error.message.includes('fetch')) {
-                this.showMessage('Network error. Please check your connection and try again.', 'error');
-            } else if (error.message.includes('Rate limit')) {
-                this.showMessage('Too many requests. Please try again in a few minutes.', 'error');
-            } else {
-                this.showMessage('Sorry, there was an error sending your message. Please try emailing us directly at theresia.lundgren@anaxiatech.se', 'error');
+            // Always provide the email fallback
+            const subject = encodeURIComponent(`Contact from ${data.name} - ${data.company}`);
+            const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\n\nMessage:\n${data.message}`);
+            const mailtoLink = `mailto:theresia.lundgren@anaxiatech.se?subject=${subject}&body=${body}`;
+            
+            this.showMessage(`Opening email client as backup... <a href="${mailtoLink}" style="color: #3182ce; text-decoration: underline;">Click here if it doesn't open automatically</a>`, 'error');
+            
+            // Try to open email client
+            try {
+                window.location.href = mailtoLink;
+            } catch (e) {
+                console.error('Could not open email client:', e);
             }
         } finally {
             this.setLoading(false);
