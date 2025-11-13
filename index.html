@@ -24,6 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="assets/js/contact-form.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -261,23 +262,24 @@
             <div class="project-highlight">
                 <div class="project-header-text">
                     <h3>Ocean Discovery Collaboration</h3>
-                    <p class="project-tagline">Supporting subsea expeditions with digital systems and data integration</p>
+                    <p class="project-tagline">IT infrastructure for critical underwater investigations including M/S Estonia reinvestigation</p>
                 </div>
                 <div class="project-content">
                     <div class="project-description">
                         <h4>Context</h4>
-                        <p>Ongoing collaboration with Ocean Discovery on offshore technology and field systems for underwater exploration and documentation.</p>
+                        <p>Technical partnership with Ocean Discovery on high-profile subsea investigations and offshore expeditions, including IT setup for the internationally significant M/S Estonia shipwreck reinvestigation.</p>
                         
-                        <h4>Work Scope</h4>
+                        <h4>Technical Contributions</h4>
                         <ul>
-                            <li>On-site operations support for subsea expeditions</li>
-                            <li>Sensor integration and ROV data pipelines</li>
-                            <li>Image capture and post-processing workflows</li>
-                            <li>Digital documentation and 3D reconstruction</li>
+                            <li>Complete IT infrastructure setup for ROV operations</li>
+                            <li>Camera systems integration and data capture pipelines</li>
+                            <li>Underwater networking and communication systems</li>
+                            <li>Real-time data processing and documentation workflows</li>
+                            <li>Multi-platform sensor integration for subsea expeditions</li>
                         </ul>
                         
                         <h4>Impact</h4>
-                        <p><strong>Result:</strong> Field-proven systems that bridge research technology with operational maritime environments.</p>
+                        <p><strong>Result:</strong> Mission-critical IT systems enabling breakthrough underwater investigations of international significance, demonstrating expertise in extreme-environment technology deployment.</p>
                     </div>
                 </div>
             </div>
@@ -450,13 +452,13 @@
                 </div>
                 <div class="contact-form">
                     <h3>Send us a Message</h3>
-                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <form>
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Email *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
@@ -464,8 +466,8 @@
                             <input type="text" id="company" name="company">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project needs..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
