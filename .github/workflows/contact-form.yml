@@ -99,12 +99,20 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
+          // Close the issue without modifying labels
           await github.rest.issues.update({
             owner: context.repo.owner,
             repo: context.repo.repo,
             issue_number: context.issue.number,
-            state: 'closed',
-            labels: ['contact-form', 'processed']
+            state: 'closed'
+          });
+          
+          // Add the 'processed' label (preserving existing labels)
+          await github.rest.issues.addLabels({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            labels: ['processed']
           });
           
           await github.rest.issues.createComment({
