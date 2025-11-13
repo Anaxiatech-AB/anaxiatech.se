@@ -49,13 +49,11 @@ function initNavbarScrollEffect() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Add/remove background opacity based on scroll position
+        // Add/remove shadow based on scroll position (maintain dark theme)
         if (scrollTop > 50) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.5)';
         } else {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
+            navbar.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.3)';
         }
 
         // Hide/show navbar on scroll (optional)
