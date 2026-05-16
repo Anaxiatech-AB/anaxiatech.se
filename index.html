@@ -189,6 +189,46 @@
                         <a href="#contact" class="btn btn-text">Get in Touch</a>
                     </div>
                 </div>
+
+                <div class="product-card">
+                    <img src="assets/images/services/simulation-digital.jpg" alt="Drones & Autonomous Systems" class="product-icon">
+                    <h3>Drones & Autonomous Systems</h3>
+                    <p class="capability-tagline">Autonomous intelligence in the field.</p>
+                    <p>Architecture and integration for drone systems, autonomous vehicles, and remote sensing platforms across defense, infrastructure, and maritime domains.</p>
+                    <ul class="product-features">
+                        <li>Drone platform architecture and system integration</li>
+                        <li>Autonomous navigation and mission control</li>
+                        <li>Sensor fusion and real-time telemetry</li>
+                        <li>ROV and UAS system design</li>
+                        <li>Video and data uplink/downlink systems</li>
+                        <li>Edge AI for autonomous decision-making</li>
+                        <li>Ground control station development</li>
+                    </ul>
+                    <div class="product-links">
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                        <a href="#contact" class="btn btn-text">Get in Touch</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="assets/images/services/mobile-iot.jpg" alt="Mesh Networking & Radio Integration" class="product-icon">
+                    <h3>Mesh Networking & Radio Integration</h3>
+                    <p class="capability-tagline">Resilient comms beyond the grid.</p>
+                    <p>Off-grid communication systems using LoRa mesh networks, amateur radio protocols, and APRS integration for defense, field operations, and maritime applications.</p>
+                    <ul class="product-features">
+                        <li>Meshtastic / LoRa mesh network deployment</li>
+                        <li>APRS position reporting and tracking</li>
+                        <li>BLE, USB serial, and MQTT transport integration</li>
+                        <li>HAM radio protocol bridging (pi-star, gpsd, rigtop)</li>
+                        <li>GPS telemetry pipelines and monitoring</li>
+                        <li>AES-128/256 encrypted channel configuration</li>
+                        <li>Cross-platform TUI monitoring tooling</li>
+                    </ul>
+                    <div class="product-links">
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                        <a href="#contact" class="btn btn-text">Get in Touch</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -260,25 +300,66 @@
             <!-- Ocean Discovery Collaboration -->
             <div class="project-highlight">
                 <div class="project-header-text">
-                    <h3>Ocean Discovery Collaboration</h3>
-                    <p class="project-tagline">IT infrastructure for critical underwater investigations including M/S Estonia reinvestigation</p>
+                    <h3>Ocean Discovery AB — Subsea Expedition IT Partnership</h3>
+                    <p class="project-tagline">IT infrastructure and data systems for world-class underwater investigations</p>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <h4>Partners</h4>
+                        <p><a href="https://oceandiscovery.org" rel="noopener noreferrer"><strong>Ocean Discovery AB</strong></a> and sister company <strong>Sub Baltica AB</strong> (Västervik, Sweden) — two companies under shared ownership specialising in advanced subsea documentation: 3D scanning and photogrammetry, ROV inspections, side scan sonar, marine archaeological documentation, and 3D visualisations. Partners include MARIS/Södertörn University and Västerviks Museum.</p>
+
+                        <h4>Selected Expeditions</h4>
+                        <ul>
+                            <li><strong>M/S Estonia reinvestigation (2021)</strong> — internationally significant wreck investigation; full IT infrastructure and data pipeline</li>
+                            <li><strong>Kraveln (1524)</strong> — 3D scanning of King Gustav Vasa's warship</li>
+                            <li><strong>S/S Skytteren (2020)</strong> — photogrammetry documentation</li>
+                            <li>Environmental hazard wreck surveys for the Swedish Maritime Authority</li>
+                            <li>Archaeological work with Södertörn University at Stäket and Valstad</li>
+                        </ul>
+
+                        <h4>Anaxiatech Technical Contributions</h4>
+                        <ul>
+                            <li>Complete IT infrastructure design and setup for ROV field operations</li>
+                            <li>Camera systems integration and subsea data capture pipelines</li>
+                            <li>Underwater networking and real-time communication systems</li>
+                            <li>3D reconstruction and photogrammetry processing pipeline integration</li>
+                            <li>Multi-platform sensor fusion for deep-water expeditions</li>
+                            <li>BBC and Discovery Channel deep-water film assignment support</li>
+                        </ul>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://oceandiscovery.org" rel="noopener noreferrer" class="btn btn-primary">Ocean Discovery AB</a>
+                        <a href="#contact" class="btn btn-secondary">Partner with Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- meshtop Project -->
+            <div class="project-highlight">
+                <div class="project-header-text">
+                    <h3>meshtop — Meshtastic GPS &amp; Mesh Bridge</h3>
+                    <p class="project-tagline">Terminal monitoring and APRS/GPS bridge for LoRa mesh radio networks</p>
                 </div>
                 <div class="project-content">
                     <div class="project-description">
                         <h4>Context</h4>
-                        <p>Technical partnership with Ocean Discovery on high-profile subsea investigations and offshore expeditions, including IT setup for the internationally significant M/S Estonia shipwreck reinvestigation.</p>
-                        
-                        <h4>Technical Contributions</h4>
+                        <p>Built to bridge Meshtastic LoRa mesh radio devices with amateur radio and positioning infrastructure. Enables GPS position forwarding, message relay, and real-time telemetry monitoring — useful for field operations, maritime tracking, and off-grid comms in defense and emergency scenarios.</p>
+
+                        <h4>Architecture</h4>
                         <ul>
-                            <li>Complete IT infrastructure setup for ROV operations</li>
-                            <li>Camera systems integration and data capture pipelines</li>
-                            <li>Underwater networking and communication systems</li>
-                            <li>Real-time data processing and documentation workflows</li>
-                            <li>Multi-platform sensor integration for subsea expeditions</li>
+                            <li><strong>Transport:</strong> Bluetooth (BLE), USB serial, LoRa/MQTT — switchable at runtime via TUI commands</li>
+                            <li><strong>Forwarding:</strong> pi-star, APRS-IS, gpsd, and rigtop integration</li>
+                            <li><strong>Security:</strong> AES-128 and AES-256 per-channel encryption with configurable PSK</li>
+                            <li><strong>Interface:</strong> Full-screen TUI (true-color) with command history and headless/debug mode</li>
+                            <li><strong>Stack:</strong> Python, uv, asyncio, TOML configuration</li>
                         </ul>
-                        
-                        <h4>Impact</h4>
-                        <p><strong>Result:</strong> Mission-critical IT systems enabling breakthrough underwater investigations of international significance, demonstrating expertise in extreme-environment technology deployment.</p>
+
+                        <h4>Use Cases</h4>
+                        <p><strong>Applications:</strong> Off-grid field operations, maritime position tracking, drone telemetry bridging, HAM radio APRS integration, and resilient mesh comms for defense and emergency response.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/theresiasnow/meshtop" rel="noopener noreferrer" class="btn btn-primary">View on GitHub</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
             </div>
@@ -289,7 +370,19 @@
             <div class="tech-grid">
                 <div class="tech-item">
                     <h4>AI & Machine Learning</h4>
-                    <p>TensorFlow, PyTorch, Scikit-learn, NLP, Computer Vision, Neural Networks, MLOps, LLM Integration</p>
+                    <p>PyTorch, PyTorch Lightning, TensorFlow, Scikit-learn, U-Net &amp; semantic segmentation, ResNet / EfficientNet / MobileNet encoders, Polars, NumPy, OpenCV, NLP, Computer Vision, MLOps, model lifecycle &amp; retraining, Azure Batch distributed training, TensorBoard</p>
+                </div>
+                <div class="tech-item">
+                    <h4>AI Coding Agents & Assistants</h4>
+                    <p>Claude Code, OpenAI Codex, GitHub Copilot, Cursor, agentic workflows, MCP servers, custom subagents &amp; skills, prompt engineering, LLM-driven CI/CD and code review</p>
+                </div>
+                <div class="tech-item">
+                    <h4>LLM Frameworks & Tooling</h4>
+                    <p>Anthropic Claude API, OpenAI API, LangChain, LlamaIndex, RAG pipelines, vector databases (pgvector, Chroma), Hugging Face Transformers, Ollama, llm-wiki knowledge base, prompt caching &amp; tool use</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Simulation & Robotics AI</h4>
+                    <p>OpenCLAW underwater vehicle simulation, ROS integration, Unreal Engine + AI agents, photogrammetry-driven training data, synthetic dataset generation, reinforcement learning for ROV control</p>
                 </div>
                 <div class="tech-item">
                     <h4>Languages & Frameworks</h4>
@@ -323,6 +416,14 @@
                     <h4>DevOps & Quality</h4>
                     <p>CI/CD, Infrastructure as Code, Monitoring, Security, HAM Radio, IARU certification</p>
                 </div>
+                <div class="tech-item">
+                    <h4>Mesh Networking & Radio</h4>
+                    <p>Meshtastic, LoRa, APRS-IS, BLE, MQTT, pi-star, gpsd, rigtop, AES-128/256 channel encryption, HAM radio (SA0TSS), IARU SWOT Taskforce</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Drones & Autonomous Systems</h4>
+                    <p>UAS/ROV system integration, autonomous navigation, sensor fusion, edge AI, real-time telemetry, ground control stations, MAVLink-compatible architectures</p>
+                </div>
             </div>
         </div>
     </section>
@@ -349,8 +450,8 @@
                     <p>E-commerce and payment solutions for <strong>Telia</strong>, <strong>Vodafone</strong>, and major retail chains. Secure transaction processing and B2B integration platforms.</p>
                 </div>
                 <div class="client-highlight">
-                    <h3>Maritime & Offshore</h3>
-                    <p>Ongoing collaboration with <strong>Ocean Discovery</strong> for subsea expeditions. Supporting offshore technology, sensor integration, ROV data pipelines, and digital documentation for underwater exploration.</p>
+                    <h3>Maritime & Offshore — Ocean Discovery AB &amp; Sub Baltica AB</h3>
+                    <p>Long-term technical partnership with <a href="https://oceandiscovery.org" rel="noopener noreferrer"><strong>Ocean Discovery AB</strong></a> and sister company <strong>Sub Baltica AB</strong> (Västervik) — specialists in subsea 3D scanning, photogrammetry, ROV inspections, side scan sonar, and marine archaeological documentation. Joint work includes the internationally significant <strong>M/S Estonia reinvestigation (2021)</strong>, the 16th-century Kraveln wreck, and environmental hazard surveys for the Swedish Maritime Authority. Anaxiatech provides IT infrastructure, camera systems integration, underwater networking, and real-time data pipelines for expedition operations.</p>
                 </div>
             </div>
             <div class="certifications">
@@ -396,7 +497,7 @@
                         <strong>Swedish Government agencies</strong>.
                     </p>
                     <p class="collaboration-note">
-                        <strong>Collaborations:</strong> Ocean Discovery (offshore systems & data integration)
+                        <strong>Partners:</strong> <a href="https://oceandiscovery.org" rel="noopener noreferrer">Ocean Discovery AB</a> &amp; Sub Baltica AB — sister companies specialising in subsea 3D scanning, ROV inspections, and marine archaeological documentation. Long-term technical partnership spanning IT infrastructure, data pipelines, and field systems for major expeditions including the M/S Estonia reinvestigation.
                     </p>
                       <div class="about-stats">
                           <div class="stat">
