@@ -2,8 +2,9 @@
 import Base from '../layouts/Base.astro';
 import CrackzTour from '../components/CrackzTour.astro';
 ---
-<Base title="Anaxiatech AB — AI Defect Detection Software" currentPage="home">
+<Base title="Anaxiatech AB — AI Defect Detection &amp; Consulting">
 
+  <!-- Hero -->
   <header id="top" class="hero">
     <div class="wrap">
       <div class="hero__grid">
@@ -20,7 +21,7 @@ import CrackzTour from '../components/CrackzTour.astro';
           </p>
           <div class="hero__ctas">
             <a href="#crackz" class="btn btn--primary">Explore Crackz</a>
-            <a href="/consulting" class="btn btn--ghost">AI consulting</a>
+            <a href="#consulting" class="btn btn--ghost">AI consulting</a>
           </div>
           <div class="hero__meta">
             <div class="hero__meta-item">
@@ -50,6 +51,7 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </header>
 
+  <!-- Trusted-by strip -->
   <section class="strip">
     <div class="wrap strip__inner">
       <span class="strip__label">Trusted by</span>
@@ -69,6 +71,7 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </section>
 
+  <!-- Crackz featured product -->
   <section id="crackz" class="section product">
     <div class="wrap">
       <div class="product__header">
@@ -171,60 +174,7 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </section>
 
-  <section id="consulting-promo" class="promo">
-    <div class="wrap promo__inner">
-      <div class="promo__copy">
-        <span class="eyebrow">AI Consulting · day job</span>
-        <h2 class="promo__title">
-          Crackz is our product. <span class="accent">Consulting is what we do every day.</span>
-        </h2>
-        <p class="promo__lede">
-          Anaxiatech is led by a senior systems architect with 30+ years of experience.
-          We take on focused AI engagements for organisations that need a serious answer to
-          a serious question — defense, infrastructure, manufacturing, R&amp;D.
-        </p>
-        <p class="promo__lede" style="color: var(--fg-3);">
-          Active Swedish security clearance · past clients include SAAB, Ericsson, Discovery+ / Warner.
-          Fixed-scope pilots from €18,000 · production sprints from €65,000 · embedded retainers.
-        </p>
-        <div class="promo__ctas">
-          <a href="/consulting" class="btn btn--primary">See AI consulting</a>
-          <a href="mailto:theresia.lundgren@anaxiatech.se?subject=Consulting%20enquiry" class="btn btn--ghost">Email Theresia</a>
-        </div>
-      </div>
-      <ul class="promo__list">
-        <li>
-          <a href="/consulting#engagements" style="display: contents; color: inherit;">
-            <span class="ix">01</span>
-            <span class="body"><strong>AI Pilot · 2 weeks</strong><span>Proof on your data. One ML question, answered with numbers.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </li>
-        <li>
-          <a href="/consulting#engagements" style="display: contents; color: inherit;">
-            <span class="ix">02</span>
-            <span class="body"><strong>Production AI Sprint · 8 weeks</strong><span>Ship a vertical slice of production ML — model, infra, UI.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </li>
-        <li>
-          <a href="/consulting#engagements" style="display: contents; color: inherit;">
-            <span class="ix">03</span>
-            <span class="body"><strong>Embedded AI Engineer · monthly</strong><span>Senior ML capacity without hiring a new headcount.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </li>
-        <li>
-          <a href="/consulting#services" style="display: contents; color: inherit;">
-            <span class="ix">04</span>
-            <span class="body"><strong>AI strategy &amp; build/buy · 2 days</strong><span>A defensible second opinion before you spend the budget.</span></span>
-            <span class="arrow">→</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
+  <!-- Capabilities / Services -->
   <section id="capabilities" class="section">
     <div class="wrap">
       <div class="section-head">
@@ -279,6 +229,7 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </section>
 
+  <!-- Industries -->
   <section id="industries" class="section section--tight" style="background: var(--bg-mantle); border-top: 1px solid var(--surface-0); border-bottom: 1px solid var(--surface-0);">
     <div class="wrap">
       <div class="section-head">
@@ -341,6 +292,7 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="section section--tight">
     <div class="wrap">
       <div class="section-head">
@@ -398,6 +350,7 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </section>
 
+  <!-- About -->
   <section id="about" class="section">
     <div class="wrap about">
       <div class="section-head__copy" style="align-self: start;">
@@ -430,6 +383,104 @@ import CrackzTour from '../components/CrackzTour.astro';
     </div>
   </section>
 
+  <!-- ── AI CONSULTING ──────────────────────────────────────────── -->
+  <section id="consulting" class="section" style="background: var(--bg-base); border-top: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">AI Consulting · day job</span>
+          <h2 class="h2">Senior AI engineering, for the problems where the wrong answer is expensive.</h2>
+          <p class="lede">
+            We're the team that built Crackz. We take on AI consulting engagements in computer vision,
+            LLM integration, and production ML — for organisations that need a serious answer to a
+            serious question. No staff augmentation. No PowerPoint. Working models, shipped.
+          </p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; align-self: flex-end;">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); letter-spacing: var(--tracking-wide);">Active Swedish security clearance · past clients include SAAB, Ericsson, Discovery+ / Warner</div>
+          <div class="hero__ctas">
+            <a href="#engagements" class="btn btn--primary">See engagement models</a>
+            <a href="#contact" class="btn btn--ghost">Talk to us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services grid -->
+      <div id="services" class="services">
+        <article class="service">
+          <div class="service__head"><span class="service__num">01</span><div class="service__title-block"><h3 class="service__title">Production segmentation &amp; detection</h3><div class="service__one">From research notebook to model that runs every Tuesday at 03:00.</div></div></div>
+          <p class="service__body">We've shipped real-world segmentation pipelines processing thousands of inspection and QA images per run. We know where the failure modes are: dataset shift, label noise, overconfident models on rare classes, ONNX export gotchas, why your A100 is sitting idle.</p>
+          <div class="service__deliver"><span class="service__deliver-label">What you walk away with</span><ul><li>Model architecture</li><li>Training loops</li><li>Eval harness</li><li>Active learning</li><li>ONNX / CUDA / ROCm</li><li>Production inference</li></ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">02</span><div class="service__title-block"><h3 class="service__title">AI for inspection &amp; QA</h3><div class="service__one">Computer vision for the things that matter when they break.</div></div></div>
+          <p class="service__body">Defect detection, crack and corrosion segmentation, weld and casting inspection, surface-finish QA. The vertical we know cold — Crackz is the public version. We can build the private version for your domain in 8–12 weeks.</p>
+          <div class="service__deliver"><span class="service__deliver-label">What you walk away with</span><ul><li>Crack · corrosion · spalling</li><li>Multi-class taxonomies</li><li>GPS / EXIF traceability</li><li>Severity scoring</li><li>Audit-grade reports</li><li>On-prem or cloud</li></ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">03</span><div class="service__title-block"><h3 class="service__title">LLM &amp; agent integration</h3><div class="service__one">Practical RAG and tool-use, not demoware.</div></div></div>
+          <p class="service__body">Where LLMs actually earn their keep: structured extraction from technical reports, RAG over engineering knowledge bases, agentic workflows for code review and triage. We pick the model that fits, not the one in the press release.</p>
+          <div class="service__deliver"><span class="service__deliver-label">What you walk away with</span><ul><li>RAG pipelines</li><li>Tool use · MCP</li><li>Prompt caching</li><li>Eval harnesses</li><li>pgvector / Chroma</li><li>Anthropic · OpenAI · Ollama</li></ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">04</span><div class="service__title-block"><h3 class="service__title">MLOps &amp; model lifecycle</h3><div class="service__one">The boring infrastructure that decides if it ships.</div></div></div>
+          <p class="service__body">Training pipelines that retrain on schedule, evaluation that catches regressions before users do, deployment that survives the model getting bigger every six months. Azure Batch, Lightning Studios, self-hosted runners for sensitive data.</p>
+          <div class="service__deliver"><span class="service__deliver-label">What you walk away with</span><ul><li>Azure Batch training</li><li>Model registry</li><li>Eval gating</li><li>Continuous retraining</li><li>TensorBoard · W&amp;B</li><li>On-prem GPU clusters</li></ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">05</span><div class="service__title-block"><h3 class="service__title">AI strategy &amp; build/buy</h3><div class="service__one">A senior second opinion before you spend the budget.</div></div></div>
+          <p class="service__body">Should you fine-tune, RAG, prompt, or just buy the API? Two-day discovery engagements for technical leaders who need a defensible answer for the board. We map the option space, cost each path, and write up the recommendation.</p>
+          <div class="service__deliver"><span class="service__deliver-label">What you walk away with</span><ul><li>Use-case discovery</li><li>Build vs. buy analysis</li><li>Cost modelling</li><li>Vendor evaluation</li><li>Roadmap</li><li>Hiring plan</li></ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">06</span><div class="service__title-block"><h3 class="service__title">Simulation &amp; synthetic data</h3><div class="service__one">Unreal-based environments where real data is scarce.</div></div></div>
+          <p class="service__body">For domains where you can't easily collect a thousand labelled images — underwater, defense, hazardous, pre-production manufacturing — we generate it. Photogrammetry-driven training data, ROV simulation, reinforcement-learning environments.</p>
+          <div class="service__deliver"><span class="service__deliver-label">What you walk away with</span><ul><li>Unreal Engine</li><li>Photogrammetry</li><li>Domain randomisation</li><li>Synthetic datasets</li><li>Sim-to-real transfer</li><li>RL environments</li></ul></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement models -->
+  <section id="engagements" class="section section--tight" style="background: var(--bg-mantle); border-top: 1px solid var(--surface-0); border-bottom: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">How we engage</span>
+          <h2 class="h2">Three ways to bring AI in.</h2>
+          <p class="lede">Fixed-scope, fixed-price for the first phase. Continue on a retainer if it's working. We don't do staff augmentation, hourly billing, or open-ended scopes.</p>
+        </div>
+      </div>
+      <div class="engagements">
+        <article class="eng">
+          <span class="eng__num">Model 01</span>
+          <h3 class="eng__title">AI Pilot</h3>
+          <p class="eng__sub">A focused two-week proof on your data. We pick one ML question, we answer it with numbers.</p>
+          <div class="eng__price"><div class="eng__price-value"><span class="from">From</span>€18,000</div><div class="eng__price-note">Fixed scope · 2 weeks</div></div>
+          <ul class="eng__list"><li>Discovery + use-case scoping</li><li>Working prototype on your data</li><li>Quantified results: precision, recall, F1, latency, cost</li><li>Recommendation: ship / iterate / abandon</li><li>Source code and trained weights, yours to keep</li></ul>
+          <a href="#contact" class="btn btn--ghost">Discuss this</a>
+        </article>
+        <article class="eng eng--feat">
+          <span class="eng__num">Model 02</span>
+          <h3 class="eng__title">Production AI Sprint</h3>
+          <p class="eng__sub">An eight-week engagement to ship a vertical slice of production ML — model, infra, and a UI to drive it.</p>
+          <div class="eng__price"><div class="eng__price-value"><span class="from">From</span>€65,000</div><div class="eng__price-note">8 weeks · deliverable</div></div>
+          <ul class="eng__list"><li>Everything in AI Pilot</li><li>Production inference (cloud or on-prem)</li><li>Retraining pipeline + eval gating</li><li>Operator-facing UI or API</li><li>Documentation + handover</li><li>Two weeks of post-launch support</li></ul>
+          <a href="#contact" class="btn btn--primary">Discuss this</a>
+        </article>
+        <article class="eng">
+          <span class="eng__num">Model 03</span>
+          <h3 class="eng__title">Embedded AI Engineer</h3>
+          <p class="eng__sub">Ongoing senior ML capacity for teams that need depth without hiring a new headcount.</p>
+          <div class="eng__price"><div class="eng__price-value"><span class="from">From</span>€12,000</div><div class="eng__price-note">Monthly retainer</div></div>
+          <ul class="eng__list"><li>Dedicated senior ML engineer</li><li>Sprint planning + model reviews</li><li>Architecture office hours</li><li>On-call for production incidents</li><li>Roadmap input</li><li>Quarterly review and renewal</li></ul>
+          <a href="#contact" class="btn btn--ghost">Discuss this</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
   <section id="contact" class="section section--tight">
     <div class="wrap">
       <div class="cta">
@@ -437,7 +488,7 @@ import CrackzTour from '../components/CrackzTour.astro';
         <div class="cta__inner">
           <div>
             <span class="eyebrow">Talk to us</span>
-            <h2 class="h2" style="margin-top: 14px;">Bring Crackz into your inspection or QA program.</h2>
+            <h2 class="h2" style="margin-top: 14px;">Bring Crackz into your inspection program, or start an AI engagement.</h2>
             <p class="cta__lede">
               Pricing, proof-of-concept projects, enterprise support, and on-prem licensing.
               We respond within one business day.
@@ -448,11 +499,11 @@ import CrackzTour from '../components/CrackzTour.astro';
               <div class="cta__contact-label">Email · Theresia Lundgren</div>
               <div class="cta__email">theresia.lundgren@anaxiatech.se</div>
             </div>
-            <a href="mailto:theresia.lundgren@anaxiatech.se?subject=Crackz%20enterprise%20enquiry" class="btn btn--primary">Open in mail</a>
+            <a href="mailto:theresia.lundgren@anaxiatech.se?subject=Enquiry" class="btn btn--primary">Open in mail</a>
             <div class="cta__rows">
               <div class="cta__row"><span class="k">Based in</span><span>Stockholm · Västervik</span></div>
               <div class="cta__row"><span class="k">Response</span><span>Within 1 business day</span></div>
-              <div class="cta__row"><span class="k">Licensing</span><span>Commercial source-available</span></div>
+              <div class="cta__row"><span class="k">Org. nr</span><span>556673-0056</span></div>
             </div>
           </div>
         </div>

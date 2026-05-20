@@ -1,0 +1,231 @@
+/* Crackz Design System — Colors & Type
+ * -------------------------------------
+ * Anaxiatech AB · "Engineering systems that work — above and below the surface"
+ * Derived from the Crackz Qt GUI theme (Catppuccin Mocha) with an aqua-marine
+ * accent shift to match the electric teal lightning in brand imagery.
+ *
+ * Brand face:   SOURCE SANS 3  (variable, upright + italic) — bundled in fonts/.
+ * Brand mono:   SOURCE CODE PRO (loaded from Google Fonts below)
+ *               — matched x-heights with Source Sans 3, same designer, SIL OFL.
+ *
+ * NOTE for Qt bundling: for desktop, prefer static TTFs of each weight over
+ * the variable fonts used here — Qt 6.2+ supports variable axes but older
+ * builds and some FreeType setups stumble. Download static weights from
+ * https://fonts.google.com/specimen/Source+Sans+3 and …/Source+Code+Pro,
+ * then load via QFontDatabase.addApplicationFont().
+ */
+
+/* ── BRAND FACE (bundled) ─────────────────────────────────── */
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('fonts/SourceSans3-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/SourceSans3-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('fonts/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Mono — Source Code Pro, loaded from Google Fonts (pairs with Source Sans 3) */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* ── BACKGROUNDS (deepest → highest) ─────────────────────── */
+  --bg-base:       #11111b;  /* image viewer, deepest chrome */
+  --bg-mantle:     #1e1e2e;  /* main content area */
+  --bg-crust:      #181825;  /* side panel, status bar, chrome */
+
+  /* ── SURFACES (interactive elements) ─────────────────────── */
+  --surface-0:     #313244;  /* cards, inputs, tree selection */
+  --surface-1:     #45475a;  /* borders, dividers, hover */
+  --surface-2:     #585b70;  /* disabled */
+
+  /* ── TEXT ────────────────────────────────────────────────── */
+  --fg-1:          #cdd6f4;  /* primary text, file names */
+  --fg-2:          #a6adc8;  /* secondary, metadata */
+  --fg-3:          #6c7086;  /* hints, shortcuts, placeholder */
+  --fg-4:          #7f849c;  /* very muted (timestamps) */
+
+  /* ── ACCENTS ─────────────────────────────────────────────── */
+  --aqua:          #5eead4;  /* PRIMARY — aqua-marine, the "crackz spark" */
+  --aqua-glow:     #89dceb;  /* cyan highlight, info, active-learning */
+  --blue:          #89b4fa;  /* links, compare mode */
+  --mauve:         #cba6f7;  /* legacy primary from Qt GUI (still used for accents) */
+
+  /* ── SEMANTIC STATUS ─────────────────────────────────────── */
+  --success:       #a6e3a1;  /* clean / no-crack */
+  --warning:       #f9e2af;  /* warnings */
+  --danger:        #f38ba8;  /* high severity, errors */
+  --medium:        #fab387;  /* medium severity (peach) */
+
+  /* ── ALPHAS (tints over dark bg) ─────────────────────────── */
+  --aqua-a13:      rgba(94, 234, 212, 0.13);
+  --mauve-a13:     rgba(203, 166, 247, 0.13);
+  --cyan-a20:      rgba(137, 220, 235, 0.20);
+  --white-a04:     rgba(255, 255, 255, 0.04);
+  --white-a08:     rgba(255, 255, 255, 0.08);
+
+  /* ── DATA BACKGROUNDS ────────────────────────────────────── */
+  --crack-result:  #1E3A1E;  /* crack-detected card bg */
+  --error-bg:      #7F1D1D;  /* destructive */
+
+  /* ── SEMANTIC ALIASES ────────────────────────────────────── */
+  --primary:       var(--aqua);
+  --primary-hover: #34d3bb;
+  --border:        var(--surface-1);
+  --border-subtle: var(--surface-0);
+  --bg-panel:      var(--bg-crust);
+  --bg-content:    var(--bg-mantle);
+  --bg-deep:       var(--bg-base);
+
+  /* ── TYPE FAMILIES ───────────────────────────────────────── */
+  --font-sans:    'Source Sans 3', -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Source Sans 3', -apple-system, sans-serif;     /* same face, heavier weights */
+  --font-mono:    'Source Code Pro', 'SF Mono', 'Consolas', 'Courier New', monospace;
+
+  /* ── TYPE SCALE (Qt app runs small — these match the product) ── */
+  --text-xs:   11px;   /* status bar, timestamps */
+  --text-sm:   12px;   /* body, table cells (matches Qt QSS default) */
+  --text-base: 13px;   /* tree / dialog body */
+  --text-md:   14px;   /* emphasized body */
+  --text-lg:   16px;   /* QSS h2, card headings */
+  --text-xl:   20px;   /* panel titles */
+  --text-2xl:  24px;   /* QSS h1 */
+  --text-3xl:  32px;   /* welcome screen title */
+  --text-4xl:  48px;   /* marketing display */
+  --text-5xl:  72px;   /* splash hero */
+
+  /* ── WEIGHTS ─────────────────────────────────────────────── */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semi:    600;
+  --weight-bold:    700;
+  --weight-black:   800;
+
+  /* ── LINE HEIGHTS ────────────────────────────────────────── */
+  --lh-tight:  1.15;
+  --lh-snug:   1.30;
+  --lh-normal: 1.50;
+  --lh-relaxed:1.65;
+
+  /* ── TRACKING ────────────────────────────────────────────── */
+  --tracking-tight:  -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;     /* section labels (uppercase) */
+  --tracking-wider:  0.12em;
+
+  /* ── SPACING (4-based, matches Qt QVBoxLayout defaults) ──── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── RADII (Qt uses 4–8px throughout) ────────────────────── */
+  --radius-xs: 2px;
+  --radius-sm: 4px;   /* inputs, toolbar buttons */
+  --radius-md: 5px;   /* QPushButton */
+  --radius-lg: 8px;   /* cards, welcome card, bubbles */
+  --radius-xl: 12px;
+  --radius-full: 999px;
+
+  /* ── SHADOWS (subtle — this is a dark product) ───────────── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.50);
+  --glow-aqua: 0 0 0 1px var(--aqua), 0 0 24px rgba(94, 234, 212, 0.35);
+  --glow-cyan: 0 0 24px rgba(137, 220, 235, 0.40);
+
+  /* ── BORDERS ─────────────────────────────────────────────── */
+  --border-1: 1px solid var(--surface-1);
+  --border-subtle-1: 1px solid var(--surface-0);
+  --border-accent: 2px solid var(--aqua);
+
+  /* ── MOTION ──────────────────────────────────────────────── */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   120ms;
+  --dur-medium: 200ms;
+  --dur-slow:   320ms;
+}
+
+/* ── SEMANTIC TYPE CLASSES ─────────────────────────────────── */
+html, body {
+  background: var(--bg-mantle);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+.h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+.h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+.h4 {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semi);
+  color: var(--fg-1);
+}
+.p    { font-size: var(--text-sm); color: var(--fg-1); line-height: var(--lh-normal); }
+.p-lg { font-size: var(--text-md); color: var(--fg-1); line-height: var(--lh-relaxed); }
+.sub  { font-size: var(--text-sm); color: var(--fg-2); }
+.hint { font-size: var(--text-xs); color: var(--fg-3); }
+.code { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--fg-1); }
+
+/* Section label: uppercase, mauve, tracked — used for panel headers in Qt GUI */
+.section-label {
+  font-size: 11px;
+  font-weight: var(--weight-semi);
+  color: var(--mauve);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+/* Mono inline */
+kbd, .kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: var(--surface-0);
+  border: 1px solid var(--surface-1);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  color: var(--fg-2);
+}

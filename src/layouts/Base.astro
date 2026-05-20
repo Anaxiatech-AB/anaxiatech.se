@@ -5,12 +5,10 @@ import '../styles/site.css';
 interface Props {
   title: string;
   description?: string;
-  currentPage?: 'home' | 'consulting';
 }
 const {
   title,
   description = 'Anaxiatech AB — AI-driven defect detection for infrastructure and manufacturing.',
-  currentPage = 'home'
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -39,7 +37,7 @@ const {
       </a>
       <div class="nav__links">
         <a href="/#crackz">Crackz</a>
-        <a href="/consulting" class:list={[{ 'is-current': currentPage === 'consulting' }]}>AI Consulting</a>
+        <a href="#consulting">AI Consulting</a>
         <a href="/#capabilities">Services</a>
         <a href="/#industries">Industries</a>
         <a href="/#projects">Projects</a>
@@ -66,7 +64,7 @@ const {
       </div>
       <nav class="mobile-menu__links">
         <a href="/#crackz">Crackz</a>
-        <a href="/consulting" class:list={[{ 'is-current': currentPage === 'consulting' }]}>AI Consulting</a>
+        <a href="#consulting">AI Consulting</a>
         <a href="/#capabilities">Services</a>
         <a href="/#industries">Industries</a>
         <a href="/#projects">Projects</a>
@@ -108,9 +106,9 @@ const {
         <div class="footer__col">
           <h5>Consulting</h5>
           <ul>
-            <li><a href="/consulting#services">Services</a></li>
-            <li><a href="/consulting#engagements">Engagements</a></li>
-            <li><a href="/consulting#contact">Get in touch</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#engagements">Engagements</a></li>
+            <li><a href="#contact">Get in touch</a></li>
           </ul>
         </div>
       </div>
