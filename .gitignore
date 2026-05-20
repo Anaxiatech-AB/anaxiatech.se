@@ -5,6 +5,10 @@ dist/
 # Node
 node_modules/
 
+# Design handoff bundle (assets migrated to public/)
+web-new/
+web.zip
+
 # Jekyll build output
 _site/
 .sass-cache/
