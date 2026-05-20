@@ -122,6 +122,15 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--white-a04);
   border-color: var(--surface-2);
 }
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.btn--outline:hover {
+  background: var(--accent-a13);
+  border-color: var(--accent);
+}
 .btn--link {
   background: transparent;
   color: var(--accent);
