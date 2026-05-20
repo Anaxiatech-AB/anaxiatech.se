@@ -195,7 +195,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
-    align-items: center;
+    align-items: start;
     position: relative;
     z-index: 1;
 }
@@ -229,6 +229,168 @@ body {
     gap: 1.5rem;
     flex-wrap: wrap;
     margin-top: 1rem;
+}
+
+.hero-feature-note {
+    color: var(--accent-light);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+.hero-feature-note a {
+    color: var(--text-accent);
+    text-decoration: none;
+}
+
+.hero-feature-note a:hover {
+    color: var(--accent-light);
+}
+
+.hero-feature-panel {
+    animation: fadeInRight 1s ease-out 0.3s both;
+}
+
+.hero-feature-card {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--border-radius-lg);
+    background: var(--background-card);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.inspection-topbar {
+    min-height: 44px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--background-secondary);
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+}
+
+.inspection-status {
+    color: var(--success-color);
+    white-space: nowrap;
+}
+
+.inspection-preview {
+    position: relative;
+    min-height: 500px;
+    background:
+        linear-gradient(90deg, rgba(13, 17, 23, 0.22), transparent 36%, rgba(13, 17, 23, 0.08)),
+        url("../images/crackz-concrete-crack-hero.png") center / cover no-repeat,
+        #596064;
+}
+
+.inspection-preview::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 32%),
+        linear-gradient(90deg, rgba(13, 17, 23, 0.28), transparent 38%, rgba(13, 17, 23, 0.12));
+    pointer-events: none;
+}
+
+.inspection-callout {
+    position: absolute;
+    top: 1.125rem;
+    left: 1.125rem;
+    z-index: 2;
+    max-width: 330px;
+    padding: 0.875rem 0.9375rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--border-radius-lg);
+    background: rgba(13, 17, 23, 0.88);
+    backdrop-filter: blur(10px);
+}
+
+.inspection-callout strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.35;
+}
+
+.inspection-callout span {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.45;
+}
+
+.inspection-mask {
+    position: absolute;
+    inset: 5.5rem 9rem 5rem 13rem;
+    border: 2px solid var(--error-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 0 0 999px rgba(13, 17, 23, 0.16), inset 0 0 38px rgba(252, 129, 129, 0.16);
+}
+
+.inspection-mask::before {
+    content: 'CRACK DETECTED';
+    position: absolute;
+    top: -2.125rem;
+    left: -2px;
+    padding: 0.45rem 0.6rem;
+    border-radius: var(--border-radius);
+    background: var(--error-color);
+    color: var(--background-primary);
+    font-size: 0.6875rem;
+    font-weight: 800;
+}
+
+.inspection-output {
+    position: absolute;
+    right: 1.125rem;
+    bottom: 1.125rem;
+    z-index: 2;
+    width: 214px;
+    padding: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--border-radius-lg);
+    background: rgba(13, 17, 23, 0.88);
+    backdrop-filter: blur(10px);
+}
+
+.inspection-output h2 {
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.inspection-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 0.5625rem;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.inspection-row strong {
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+}
+
+.inspection-bar {
+    height: 7px;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.inspection-bar span {
+    display: block;
+    height: 100%;
+    background: var(--text-accent);
 }
 
 .hero-image {
@@ -1162,6 +1324,18 @@ section {
         justify-content: center;
     }
 
+    .hero-feature-note {
+        text-align: center;
+    }
+
+    .inspection-preview {
+        min-height: 390px;
+    }
+
+    .inspection-mask {
+        inset: 5rem 7rem 4.5rem 10rem;
+    }
+
     .about-stats {
         justify-content: center;
     }
@@ -1201,6 +1375,34 @@ section {
 
     .hero-title {
         font-size: var(--font-size-2xl);
+    }
+
+    .inspection-topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0.75rem 1rem;
+    }
+
+    .inspection-preview {
+        min-height: 360px;
+    }
+
+    .inspection-callout {
+        top: 0.875rem;
+        left: 0.875rem;
+        right: 0.875rem;
+        max-width: none;
+    }
+
+    .inspection-mask {
+        inset: 7.75rem 4rem 5.75rem 5.5rem;
+    }
+
+    .inspection-output {
+        right: 0.875rem;
+        bottom: 0.875rem;
+        left: 0.875rem;
+        width: auto;
     }
 
     .section-title {
