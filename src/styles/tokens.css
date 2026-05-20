@@ -1,0 +1,176 @@
+/* Crackz Design System — Colors & Type */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/SourceSans3-VariableFont_wght.ttf') format('truetype-variations'),
+       url('/fonts/SourceSans3-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/fonts/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('/fonts/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg-base:       #11111b;
+  --bg-mantle:     #1e1e2e;
+  --bg-crust:      #181825;
+  --surface-0:     #313244;
+  --surface-1:     #45475a;
+  --surface-2:     #585b70;
+  --fg-1:          #cdd6f4;
+  --fg-2:          #a6adc8;
+  --fg-3:          #6c7086;
+  --fg-4:          #7f849c;
+  --aqua:          #5eead4;
+  --aqua-glow:     #89dceb;
+  --blue:          #89b4fa;
+  --mauve:         #cba6f7;
+  --success:       #a6e3a1;
+  --warning:       #f9e2af;
+  --danger:        #f38ba8;
+  --medium:        #fab387;
+  --aqua-a13:      rgba(94, 234, 212, 0.13);
+  --mauve-a13:     rgba(203, 166, 247, 0.13);
+  --cyan-a20:      rgba(137, 220, 235, 0.20);
+  --white-a04:     rgba(255, 255, 255, 0.04);
+  --white-a08:     rgba(255, 255, 255, 0.08);
+  --crack-result:  #1E3A1E;
+  --error-bg:      #7F1D1D;
+  --primary:       var(--aqua);
+  --primary-hover: #34d3bb;
+  --border:        var(--surface-1);
+  --border-subtle: var(--surface-0);
+  --bg-panel:      var(--bg-crust);
+  --bg-content:    var(--bg-mantle);
+  --bg-deep:       var(--bg-base);
+  --font-sans:    'Source Sans 3', -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Source Sans 3', -apple-system, sans-serif;
+  --font-mono:    'Source Code Pro', 'SF Mono', 'Consolas', 'Courier New', monospace;
+  --text-xs:   11px;
+  --text-sm:   12px;
+  --text-base: 13px;
+  --text-md:   14px;
+  --text-lg:   16px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+  --text-3xl:  32px;
+  --text-4xl:  48px;
+  --text-5xl:  72px;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semi:    600;
+  --weight-bold:    700;
+  --weight-black:   800;
+  --lh-tight:  1.15;
+  --lh-snug:   1.30;
+  --lh-normal: 1.50;
+  --lh-relaxed:1.65;
+  --tracking-tight:  -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;
+  --tracking-wider:  0.12em;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.50);
+  --glow-aqua: 0 0 0 1px var(--aqua), 0 0 24px rgba(94, 234, 212, 0.35);
+  --glow-cyan: 0 0 24px rgba(137, 220, 235, 0.40);
+  --border-1: 1px solid var(--surface-1);
+  --border-subtle-1: 1px solid var(--surface-0);
+  --border-accent: 2px solid var(--aqua);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:   120ms;
+  --dur-medium: 200ms;
+  --dur-slow:   320ms;
+}
+
+html, body {
+  background: var(--bg-mantle);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+.h-display {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+}
+.h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+.h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+.h4 {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semi);
+  color: var(--fg-1);
+}
+.p    { font-size: var(--text-sm); color: var(--fg-1); line-height: var(--lh-normal); }
+.p-lg { font-size: var(--text-md); color: var(--fg-1); line-height: var(--lh-relaxed); }
+.sub  { font-size: var(--text-sm); color: var(--fg-2); }
+.hint { font-size: var(--text-xs); color: var(--fg-3); }
+.code { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--fg-1); }
+
+.section-label {
+  font-size: 11px;
+  font-weight: var(--weight-semi);
+  color: var(--mauve);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+kbd, .kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: var(--surface-0);
+  border: 1px solid var(--surface-1);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  color: var(--fg-2);
+}

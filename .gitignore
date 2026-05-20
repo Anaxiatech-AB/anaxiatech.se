@@ -1,3 +1,10 @@
+# Astro build output
+dist/
+.astro/
+
+# Node
+node_modules/
+
 # Jekyll build output
 _site/
 .sass-cache/

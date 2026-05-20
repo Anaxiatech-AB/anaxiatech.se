@@ -1,0 +1,127 @@
+---
+// Static tab data, no props needed
+---
+
+<div id="tour" class="tour">
+  <div class="tour__head">
+    <div>
+      <span class="eyebrow">Product tour</span>
+      <h3 class="h2" style="margin-top: 10px;">The desktop app, end to end.</h3>
+    </div>
+    <div class="tour__tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tour-tab="summary" class="tour__tab active">
+        <span class="glyph">&#9638;</span>Project
+      </button>
+      <button role="tab" aria-selected="false" data-tour-tab="mask" class="tour__tab">
+        <span class="glyph">&#9998;</span>Mask Editor
+      </button>
+      <button role="tab" aria-selected="false" data-tour-tab="train" class="tour__tab">
+        <span class="glyph">&#8599;</span>Training
+      </button>
+      <button role="tab" aria-selected="false" data-tour-tab="detect" class="tour__tab">
+        <span class="glyph">&#9673;</span>Detection
+      </button>
+    </div>
+  </div>
+
+  <div class="tour__viewport">
+    <div data-tour-panel="summary">
+      <div class="tour__window-chrome">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="title mono">demo-project · crackz-gui v0.81.0</span>
+      </div>
+      <img class="tour__shot" src="/assets/gui/project_summary_view.png" alt="Project Summary" />
+      <div class="tour__caption">
+        <div>
+          <h4>Project Summary</h4>
+          <p>Single pane for project state — model config, training schedule, detection parameters and data paths. Everything reproducible from one YAML.</p>
+        </div>
+        <div class="tour__caption-meta">
+          <div class="row"><span class="k">Backbone</span><span class="v">SegFormer-B2</span></div>
+          <div class="row"><span class="k">Input</span><span class="v">512 × 512 px</span></div>
+          <div class="row"><span class="k">Threshold</span><span class="v">0.50</span></div>
+          <div class="row"><span class="k">Loss</span><span class="v">Combo (Dice + BCE)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-tour-panel="mask" hidden>
+      <div class="tour__window-chrome">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="title mono">MASK_EDITOR · garaymc_cracks_train_0.jpg</span>
+      </div>
+      <img class="tour__shot" src="/assets/gui/mask_editor_view.png" alt="Mask Editor" />
+      <div class="tour__caption">
+        <div>
+          <h4>Mask Editor</h4>
+          <p>Brush-driven annotation built for production scale. 50–80% faster than CVAT on dense crack imagery, with mask propagation across image series.</p>
+        </div>
+        <div class="tour__caption-meta">
+          <div class="row"><span class="k">Tool</span><span class="v">Brush 20px</span></div>
+          <div class="row"><span class="k">Category</span><span class="v">Crack</span></div>
+          <div class="row"><span class="k">Throughput</span><span class="v">~140 imgs/hr</span></div>
+          <div class="row"><span class="k">Format</span><span class="v">PNG · binary or multi-class</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-tour-panel="train" hidden>
+      <div class="tour__window-chrome">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="title mono">training · in progress</span>
+      </div>
+      <img class="tour__shot" src="/assets/gui/training_run_view.png" alt="Training Run" />
+      <div class="tour__caption">
+        <div>
+          <h4>Training Run</h4>
+          <p>Live training with live metrics — Epoch · Loss · Val F1 · IoU · ETA. Built on PyTorch Lightning; checkpoints record their annotation schema so incompatible models are flagged automatically.</p>
+        </div>
+        <div class="tour__caption-meta">
+          <div class="row"><span class="k">Engine</span><span class="v">PyTorch Lightning</span></div>
+          <div class="row"><span class="k">Encoders</span><span class="v">SegFormer B0–B5</span></div>
+          <div class="row"><span class="k">Optimizer</span><span class="v">AdamW, lr 1e-3</span></div>
+          <div class="row"><span class="k">GPU</span><span class="v">CUDA · ROCm · CPU</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-tour-panel="detect" hidden>
+      <div class="tour__window-chrome">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="title mono">detection · run preview</span>
+      </div>
+      <img class="tour__shot" src="/assets/gui/detection_run_view.png" alt="Detection Results" />
+      <div class="tour__caption">
+        <div>
+          <h4>Detection Results</h4>
+          <p>Galleries, summary tabs, severity buckets. Defect-detected cards are tinted in a dark green so flagged findings read at a glance across thousands of images — whether they're harbor pier scans or factory weld inspections.</p>
+        </div>
+        <div class="tour__caption-meta">
+          <div class="row"><span class="k">Output</span><span class="v">Annotated PNG · GeoJSON</span></div>
+          <div class="row"><span class="k">Severity</span><span class="v">High · Med · Low · Clean</span></div>
+          <div class="row"><span class="k">Tiling</span><span class="v">Auto 512px overlap</span></div>
+          <div class="row"><span class="k">Confidence</span><span class="v">Per-pixel + per-image</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('[data-tour-tab]') as NodeListOf<HTMLButtonElement>;
+    const panels = document.querySelectorAll('[data-tour-panel]') as NodeListOf<HTMLElement>;
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tourTab;
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        panels.forEach(p => { p.hidden = true; });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const panel = document.querySelector(`[data-tour-panel="${target}"]`) as HTMLElement;
+        if (panel) panel.hidden = false;
+      });
+    });
+  });
+</script>

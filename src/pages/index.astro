@@ -1,0 +1,467 @@
+---
+import Base from '../layouts/Base.astro';
+import CrackzTour from '../components/CrackzTour.astro';
+---
+<Base title="Anaxiatech AB — AI Defect Detection Software" currentPage="home">
+
+  <header id="top" class="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">Anaxiatech AB · Stockholm</span>
+          <h1 class="h1 hero__title">
+            Engineering systems that work — <span class="accent">above and below the surface.</span>
+          </h1>
+          <p class="lede hero__lede">
+            We build AI-driven defect-detection software for infrastructure and manufacturing.
+            Our flagship product, Crackz, is in production across harbors, bridges, factories
+            and energy assets — reducing inspection costs by up to 70% while improving safety
+            and consistency.
+          </p>
+          <div class="hero__ctas">
+            <a href="#crackz" class="btn btn--primary">Explore Crackz</a>
+            <a href="/consulting" class="btn btn--ghost">AI consulting</a>
+          </div>
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <span class="label">Founded</span>
+              <span class="value">2022 · Stockholm</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="label">Domain</span>
+              <span class="value">Infrastructure · Manufacturing</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="label">Delivery</span>
+              <span class="value">Product · Consulting</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img src="/assets/crackz-logo.png" alt="Crackz brand: cracked stone with electric teal lightning forming an X" />
+          <div class="hero__visual-overlay">
+            <span class="corner"><span class="dot"></span> Detection · live</span>
+            <span class="ticks">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="strip">
+    <div class="wrap strip__inner">
+      <span class="strip__label">Trusted by</span>
+      <div class="strip__items">
+        <span>SAAB Aurora</span>
+        <span class="dot">·</span>
+        <span>SAAB Missiles</span>
+        <span class="dot">·</span>
+        <span>Ericsson</span>
+        <span class="dot">·</span>
+        <span>Discovery+ / Warner</span>
+        <span class="dot">·</span>
+        <span>Sony Mobile</span>
+        <span class="dot">·</span>
+        <span>Telia · Vodafone</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="crackz" class="section product">
+    <div class="wrap">
+      <div class="product__header">
+        <div class="product__title">
+          <span class="product__title-mark">
+            <img src="/assets/crackz-logo.png" alt="" />
+          </span>
+          <div>
+            <span class="eyebrow">Flagship product · v0.81</span>
+            <h2>Crackz.</h2>
+            <p class="product__sub">
+              AI-powered defect detection — cracks, corrosion, surface flaws, weld defects.
+              Built for harbor and bridge infrastructure; deployed across factories, energy assets
+              and manufacturing QA. Desktop, web, and CLI from one source-available codebase.
+            </p>
+          </div>
+        </div>
+        <div class="product__copy">
+          <p class="lede">
+            Process thousands of inspection images in hours instead of weeks. Detect issues before
+            they become critical. Document everything for the audit trail.
+          </p>
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--primary">Request a demo</a>
+            <a href="#tour" class="btn btn--ghost">See the product</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stats__item">
+          <div class="stats__value">70<span class="unit">%</span></div>
+          <div class="stats__label">Cost reduction</div>
+          <div class="stats__caption">vs. traditional manual inspection cycles</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">5<span class="unit">×</span></div>
+          <div class="stats__label">Faster cycles</div>
+          <div class="stats__caption">on harbor concrete · generalises to other surfaces</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">90<span class="unit">%+</span></div>
+          <div class="stats__label">Detection accuracy</div>
+          <div class="stats__caption">on validation datasets, binary segmentation</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">$25–75<span class="unit">K</span></div>
+          <div class="stats__label">Annual savings</div>
+          <div class="stats__caption">typical per inspection program</div>
+        </div>
+      </div>
+
+      <CrackzTour />
+
+      <div class="workflow">
+        <div class="workflow__step">
+          <h4>Import</h4>
+          <p>Drop in infrastructure, manufacturing or facility imagery. Automatic raw/train/val/test split, EXIF preserved end-to-end.</p>
+          <div class="cmd"><span class="prompt">$</span>crackz import-images --src ./photos</div>
+        </div>
+        <div class="workflow__step">
+          <h4>Annotate</h4>
+          <p>Mask editor with brush, propagation across image series, and category-aware multi-class taxonomies.</p>
+          <div class="cmd"><span class="prompt">›</span>Tools → Mask Editor</div>
+        </div>
+        <div class="workflow__step">
+          <h4>Train</h4>
+          <p>SegFormer-B2 by default; swap encoders, override hyperparameters at runtime. PyTorch Lightning underneath.</p>
+          <div class="cmd"><span class="prompt">$</span>crackz train --epochs 20</div>
+        </div>
+        <div class="workflow__step">
+          <h4>Detect</h4>
+          <p>Run across thousands of images. Severity buckets, annotated PNGs, GeoJSON output ready for QGIS or GIS pipelines.</p>
+          <div class="cmd"><span class="prompt">$</span>crackz detect run</div>
+        </div>
+      </div>
+
+      <div class="paths">
+        <article class="path path--featured">
+          <span class="path__tag">Fastest path</span>
+          <h3 class="h3">Use pre-trained models</h3>
+          <p>Quick deployment with ready-made checkpoints. Suited to standard crack-detection scenarios across concrete and steel.</p>
+          <ul>
+            <li>Production-ready in days, not quarters</li>
+            <li>Consistent results across sites and inspectors</li>
+            <li>Zero training data required to start</li>
+          </ul>
+        </article>
+        <article class="path">
+          <span class="path__tag">Most accurate</span>
+          <h3 class="h3">Train custom models</h3>
+          <p>Maximum accuracy for your domain — bespoke imagery, unusual defect types, multi-class taxonomies.</p>
+          <ul>
+            <li>100 images for a pilot; 500+ for production-grade</li>
+            <li>Domain-specific defect categories</li>
+            <li>Active-learning loop to reduce annotation cost</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="consulting-promo" class="promo">
+    <div class="wrap promo__inner">
+      <div class="promo__copy">
+        <span class="eyebrow">AI Consulting · day job</span>
+        <h2 class="promo__title">
+          Crackz is our product. <span class="accent">Consulting is what we do every day.</span>
+        </h2>
+        <p class="promo__lede">
+          Anaxiatech is led by a senior systems architect with 30+ years of experience.
+          We take on focused AI engagements for organisations that need a serious answer to
+          a serious question — defense, infrastructure, manufacturing, R&amp;D.
+        </p>
+        <p class="promo__lede" style="color: var(--fg-3);">
+          Active Swedish security clearance · past clients include SAAB, Ericsson, Discovery+ / Warner.
+          Fixed-scope pilots from €18,000 · production sprints from €65,000 · embedded retainers.
+        </p>
+        <div class="promo__ctas">
+          <a href="/consulting" class="btn btn--primary">See AI consulting</a>
+          <a href="mailto:theresia.lundgren@anaxiatech.se?subject=Consulting%20enquiry" class="btn btn--ghost">Email Theresia</a>
+        </div>
+      </div>
+      <ul class="promo__list">
+        <li>
+          <a href="/consulting#engagements" style="display: contents; color: inherit;">
+            <span class="ix">01</span>
+            <span class="body"><strong>AI Pilot · 2 weeks</strong><span>Proof on your data. One ML question, answered with numbers.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/consulting#engagements" style="display: contents; color: inherit;">
+            <span class="ix">02</span>
+            <span class="body"><strong>Production AI Sprint · 8 weeks</strong><span>Ship a vertical slice of production ML — model, infra, UI.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/consulting#engagements" style="display: contents; color: inherit;">
+            <span class="ix">03</span>
+            <span class="body"><strong>Embedded AI Engineer · monthly</strong><span>Senior ML capacity without hiring a new headcount.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="/consulting#services" style="display: contents; color: inherit;">
+            <span class="ix">04</span>
+            <span class="body"><strong>AI strategy &amp; build/buy · 2 days</strong><span>A defensible second opinion before you spend the budget.</span></span>
+            <span class="arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="capabilities" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">What we build</span>
+          <h2 class="h2">Engineering for systems that must not fail.</h2>
+          <p class="lede">
+            We're a small Stockholm team building production AI for defect detection — across
+            infrastructure inspection, manufacturing QA, and energy assets. Crackz is the flagship;
+            the capabilities behind it are available for engagement.
+          </p>
+        </div>
+      </div>
+      <div class="caps">
+        <div class="cap">
+          <span class="cap__index">01 / 06</span>
+          <div class="cap__title">AI &amp; Automation</div>
+          <div class="cap__body">Machine-learning pipelines, computer vision, and data analysis for industrial inspection and decision support. From image to insight.</div>
+          <div class="cap__tags"><span class="cap__tag">PyTorch</span><span class="cap__tag">Segmentation</span><span class="cap__tag">MLOps</span><span class="cap__tag">NLP</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">02 / 06</span>
+          <div class="cap__title">System &amp; Solution Architecture</div>
+          <div class="cap__body">Hands-on architecture for complex enterprise systems — microservices, domain-driven design, full-stack delivery across Java, Python, Go and modern frontends.</div>
+          <div class="cap__tags"><span class="cap__tag">Microservices</span><span class="cap__tag">DDD</span><span class="cap__tag">API design</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">03 / 06</span>
+          <div class="cap__title">Platform &amp; DevSecOps</div>
+          <div class="cap__body">Cloud-native infrastructure, IaC and CI/CD for scalable, resilient systems. Secure GitOps, observability, hybrid and edge deployments across AWS, Azure and GCP.</div>
+          <div class="cap__tags"><span class="cap__tag">AWS</span><span class="cap__tag">Azure</span><span class="cap__tag">GCP</span><span class="cap__tag">Kubernetes</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">04 / 06</span>
+          <div class="cap__title">Simulation &amp; Digital Environments</div>
+          <div class="cap__body">Unreal Engine, photogrammetry and digital-twin pipelines for defense and offshore. Real-time rendering, underwater ROV simulation, interactive visualisation.</div>
+          <div class="cap__tags"><span class="cap__tag">Unreal</span><span class="cap__tag">C++</span><span class="cap__tag">Photogrammetry</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">05 / 06</span>
+          <div class="cap__title">Government &amp; Defense</div>
+          <div class="cap__body">High-security contracting with active Swedish security clearance. Classified-systems development, audits and compliance, CTO and tech-lead consulting.</div>
+          <div class="cap__tags"><span class="cap__tag">Cleared</span><span class="cap__tag">Compliance</span><span class="cap__tag">CTO</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">06 / 06</span>
+          <div class="cap__title">Drones, Autonomous &amp; Mesh</div>
+          <div class="cap__body">UAS / ROV system integration, sensor fusion, edge AI — paired with off-grid comms via Meshtastic / LoRa, APRS and HAM-bridged telemetry pipelines.</div>
+          <div class="cap__tags"><span class="cap__tag">UAS</span><span class="cap__tag">LoRa</span><span class="cap__tag">APRS</span><span class="cap__tag">Edge AI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries" class="section section--tight" style="background: var(--bg-mantle); border-top: 1px solid var(--surface-0); border-bottom: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">Where Crackz runs</span>
+          <h2 class="h2">Built for the field, the line, and the audit.</h2>
+        </div>
+      </div>
+      <div class="industries">
+        <article class="industry">
+          <div class="industry__top">
+            <div class="industry__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 20h18" /><path d="M5 20V8h4v12" /><path d="M15 20V12h4v8" />
+                <path d="M3 14l3-2 3 2" /><path d="M13 17l3-2 3 2" />
+              </svg>
+            </div>
+            <span class="industry__name">Harbors &amp; Infrastructure</span>
+          </div>
+          <h4>Concrete deterioration across piers, docks, bridges and seawalls.</h4>
+          <p>Drone and handheld imagery into measured, ranked defect patterns — without sending divers or rope-access teams in first. The use case Crackz was originally built for.</p>
+          <div class="industry__metrics">
+            <div class="industry__metric"><div class="num">5×</div><div class="lbl">Faster cycles</div></div>
+            <div class="industry__metric"><div class="num">90%+</div><div class="lbl">Validation accuracy</div></div>
+          </div>
+        </article>
+        <article class="industry">
+          <div class="industry__top">
+            <div class="industry__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20" /><path d="M4 12V8m4 4V6m4 6V4m4 8V6m4 6V8" /><path d="M2 18h20" />
+              </svg>
+            </div>
+            <span class="industry__name">Manufacturing &amp; QA</span>
+          </div>
+          <h4>Surface-defect detection on production lines and finished goods.</h4>
+          <p>Scratches, voids, weld defects, corrosion, paint failures, casting porosity. Trainable on your taxonomy — multi-class segmentation, not just crack/no-crack. Inline or post-process.</p>
+          <div class="industry__metrics">
+            <div class="industry__metric"><div class="num">Multi-class</div><div class="lbl">Per-pixel</div></div>
+            <div class="industry__metric"><div class="num">Sub-second</div><div class="lbl">Inference</div></div>
+          </div>
+        </article>
+        <article class="industry">
+          <div class="industry__top">
+            <div class="industry__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 20V10l5 3V7l5 4V4l8 16z" /><path d="M3 20h18" />
+              </svg>
+            </div>
+            <span class="industry__name">Industrial &amp; Energy</span>
+          </div>
+          <h4>Chemical, refinery, wind, and rail asset integrity.</h4>
+          <p>Remote analysis of imagery from maintenance teams, robotic inspectors, or autonomous drones. Predictive maintenance, condition-based renewal — instead of emergency response.</p>
+          <div class="industry__metrics">
+            <div class="industry__metric"><div class="num">~zero</div><div class="lbl">Confined entries</div></div>
+            <div class="industry__metric"><div class="num">24/7</div><div class="lbl">Pipeline ready</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section--tight">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">Adjacent work</span>
+          <h2 class="h2">Other projects from the lab.</h2>
+          <p class="lede">
+            Crackz is the commercial product. These are the research and tooling efforts
+            that feed back into it — marine archaeology, 3D mesh tooling, and other custom systems.
+          </p>
+        </div>
+      </div>
+      <div class="projects">
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">01</span><span class="proj__status proj__status--live">In production</span></div>
+          <h3>Crackz</h3>
+          <p>Commercial source-available AI defect-detection software — infrastructure and manufacturing. Desktop · web · CLI · Docker.</p>
+          <ul class="proj__bullets">
+            <li><span class="k">Domain</span> Infrastructure AI</li>
+            <li><span class="k">Stack</span> PySide6 · PyTorch · Streamlit</li>
+            <li><span class="k">License</span> Commercial source-available</li>
+          </ul>
+        </article>
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">02</span><span class="proj__status proj__status--live">Active</span></div>
+          <h3>WreckGame</h3>
+          <p>Unreal Engine ROV training environment for subsea operations. Photogrammetry-captured wreck sites, physics-accurate underwater dynamics, turbidity modelling — mission rehearsal without the boat.</p>
+          <ul class="proj__bullets">
+            <li><span class="k">Domain</span> Defense · Offshore training</li>
+            <li><span class="k">Stack</span> Unreal Engine · C++</li>
+            <li><span class="k">Status</span> In active development</li>
+          </ul>
+        </article>
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">03</span><span class="proj__status proj__status--rnd">Partnership</span></div>
+          <h3>Ocean Discovery / SubBaltica</h3>
+          <p>Long-running partnership with the two sister companies behind the M/S Estonia reinvestigation, the Kraveln (1524) scan, and BBC / Discovery deep-water assignments. We run their IT, camera, networking and 3D-reconstruction pipelines.</p>
+          <ul class="proj__bullets">
+            <li><span class="k">Domain</span> Subsea · Marine archaeology</li>
+            <li><span class="k">Stack</span> Photogrammetry · Sensor fusion</li>
+            <li><span class="k">Status</span> Ongoing</li>
+          </ul>
+        </article>
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">04</span><span class="proj__status proj__status--live">Open source</span></div>
+          <h3>meshtop</h3>
+          <p>Terminal monitor and APRS / GPS bridge for Meshtastic LoRa mesh networks. Off-grid comms tooling for maritime tracking, drone telemetry bridging, and HAM-bridged field operations.</p>
+          <ul class="proj__bullets">
+            <li><span class="k">Domain</span> Mesh radio · Field ops</li>
+            <li><span class="k">Stack</span> Python · LoRa · APRS · BLE</li>
+            <li><span class="k">Status</span> github.com/theresiasnow/meshtop</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap about">
+      <div class="section-head__copy" style="align-self: start;">
+        <span class="eyebrow">About Anaxiatech</span>
+        <h2 class="h2">A Stockholm engineering studio.</h2>
+      </div>
+      <div class="about__copy">
+        <p>
+          Anaxiatech AB is a Swedish technology company — founded and led by Theresia Lundgren, a systems
+          architect with 30+ years of experience across AI, DevSecOps and applied R&amp;D. We design and
+          ship production software for problems where the wrong answer is expensive: infrastructure
+          inspection, manufacturing QA, defense systems, marine archaeology.
+        </p>
+        <div class="about__signature">
+          "Engineering systems that work — above and below the surface."
+        </div>
+        <p>
+          Hands-on work, end to end: we write the model code, ship the desktop app, run the Azure Batch
+          jobs, and sit with operators while they review the results. Past and current clients include
+          SAAB, Ericsson, Discovery+ / Warner Brothers, and Swedish government agencies. Long-running
+          technical partnership with Ocean Discovery AB and SubBaltica AB on subsea expeditions.
+        </p>
+        <div class="about__meta">
+          <div class="about__meta-item"><span class="k">Based in</span><span class="v">Stockholm · Västervik</span></div>
+          <div class="about__meta-item"><span class="k">Org. nr</span><span class="v mono">556673-0056</span></div>
+          <div class="about__meta-item"><span class="k">Experience</span><span class="v">30+ years</span></div>
+          <div class="about__meta-item"><span class="k">Lead product</span><span class="v">Crackz</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section--tight">
+    <div class="wrap">
+      <div class="cta">
+        <div class="cta__bg"></div>
+        <div class="cta__inner">
+          <div>
+            <span class="eyebrow">Talk to us</span>
+            <h2 class="h2" style="margin-top: 14px;">Bring Crackz into your inspection or QA program.</h2>
+            <p class="cta__lede">
+              Pricing, proof-of-concept projects, enterprise support, and on-prem licensing.
+              We respond within one business day.
+            </p>
+          </div>
+          <div class="cta__contact">
+            <div>
+              <div class="cta__contact-label">Email · Theresia Lundgren</div>
+              <div class="cta__email">theresia.lundgren@anaxiatech.se</div>
+            </div>
+            <a href="mailto:theresia.lundgren@anaxiatech.se?subject=Crackz%20enterprise%20enquiry" class="btn btn--primary">Open in mail</a>
+            <div class="cta__rows">
+              <div class="cta__row"><span class="k">Based in</span><span>Stockholm · Västervik</span></div>
+              <div class="cta__row"><span class="k">Response</span><span>Within 1 business day</span></div>
+              <div class="cta__row"><span class="k">Licensing</span><span>Commercial source-available</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    html { scroll-behavior: smooth; }
+  </style>
+
+</Base>
