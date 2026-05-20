@@ -204,7 +204,7 @@ button { font-family: inherit; cursor: pointer; }
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(32px, 5vw, 80px);
-  align-items: center;
+  align-items: start;
 }
 .hero__copy { display: flex; flex-direction: column; gap: 28px; }
 .hero__title { max-width: 14ch; }
