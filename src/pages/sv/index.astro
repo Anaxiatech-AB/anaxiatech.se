@@ -1,0 +1,501 @@
+---
+import Base from '../../layouts/Base.astro';
+import CrackzTour from '../../components/CrackzTour.astro';
+import { t } from '../../i18n/sv';
+---
+<Base title={t.meta.title} description={t.meta.description} lang="sv">
+
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">{t.hero.eyebrow}</span>
+          <h1 class="h1 hero__title">
+            {t.hero.title}<span class="accent">{t.hero.titleAccent}</span>
+          </h1>
+          <p class="lede hero__lede">{t.hero.lede}</p>
+          <div class="hero__ctas">
+            <a href="#crackz" class="btn btn--primary">{t.hero.ctaCrackz}</a>
+            <a href="#consulting" class="btn btn--outline">{t.hero.ctaConsulting}</a>
+          </div>
+          <div class="hero__meta">
+            <div class="hero__meta-item">
+              <span class="label">{t.hero.labelFounded}</span>
+              <span class="value">{t.hero.valueFounded}</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="label">{t.hero.labelClearance}</span>
+              <span class="value">{t.hero.valueClearance}</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="label">{t.hero.labelDelivery}</span>
+              <span class="value">{t.hero.valueDelivery}</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img src="/assets/crackz-logo.png" alt={t.hero.imgAlt} />
+          <div class="hero__visual-overlay">
+            <span class="corner"><span class="dot"></span> {t.hero.detectionLive}</span>
+            <span class="ticks">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Trusted-by strip -->
+  <section class="strip">
+    <div class="wrap strip__inner">
+      <span class="strip__label">{t.strip.label}</span>
+      <div class="strip__items">
+        <span>SAAB Aurora</span>
+        <span class="dot">·</span>
+        <span>SAAB Missiles</span>
+        <span class="dot">·</span>
+        <span>Ericsson</span>
+        <span class="dot">·</span>
+        <span>Discovery+ / Warner</span>
+        <span class="dot">·</span>
+        <span>Sony Mobile</span>
+        <span class="dot">·</span>
+        <span>Telia · Vodafone</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crackz featured product -->
+  <section id="crackz" class="section product">
+    <div class="wrap">
+      <div class="product__header">
+        <div class="product__title">
+          <span class="product__title-mark">
+            <img src="/assets/crackz-logo.png" alt="" />
+          </span>
+          <div>
+            <span class="eyebrow">{t.crackz.eyebrow}</span>
+            <h2>{t.crackz.heading}</h2>
+            <p class="product__sub">{t.crackz.sub}</p>
+          </div>
+        </div>
+        <div class="product__copy">
+          <p class="lede">{t.crackz.lede}</p>
+          <div class="hero__ctas">
+            <a href="#contact" class="btn btn--primary">{t.crackz.ctaDemo}</a>
+            <a href="#tour" class="btn btn--ghost">{t.crackz.ctaTour}</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stats__item">
+          <div class="stats__value">70<span class="unit">%</span></div>
+          <div class="stats__label">{t.crackz.stat1Label}</div>
+          <div class="stats__caption">{t.crackz.stat1Caption}</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">5<span class="unit">×</span></div>
+          <div class="stats__label">{t.crackz.stat2Label}</div>
+          <div class="stats__caption">{t.crackz.stat2Caption}</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">90<span class="unit">%+</span></div>
+          <div class="stats__label">{t.crackz.stat3Label}</div>
+          <div class="stats__caption">{t.crackz.stat3Caption}</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">250–750<span class="unit">KSEK</span></div>
+          <div class="stats__label">{t.crackz.stat4Label}</div>
+          <div class="stats__caption">{t.crackz.stat4Caption}</div>
+        </div>
+      </div>
+
+      <CrackzTour />
+
+      <div class="workflow">
+        <div class="workflow__step">
+          <h4>{t.crackz.step1Title}</h4>
+          <p>{t.crackz.step1Body}</p>
+          <div class="cmd"><span class="prompt">$</span>crackz import-images --src ./photos</div>
+        </div>
+        <div class="workflow__step">
+          <h4>{t.crackz.step2Title}</h4>
+          <p>{t.crackz.step2Body}</p>
+          <div class="cmd"><span class="prompt">›</span>Verktyg → Maskredigerare</div>
+        </div>
+        <div class="workflow__step">
+          <h4>{t.crackz.step3Title}</h4>
+          <p>{t.crackz.step3Body}</p>
+          <div class="cmd"><span class="prompt">$</span>crackz train --epochs 20</div>
+        </div>
+        <div class="workflow__step">
+          <h4>{t.crackz.step4Title}</h4>
+          <p>{t.crackz.step4Body}</p>
+          <div class="cmd"><span class="prompt">$</span>crackz detect run</div>
+        </div>
+      </div>
+
+      <div class="paths">
+        <article class="path path--featured">
+          <span class="path__tag">{t.crackz.path1Tag}</span>
+          <h3 class="h3">{t.crackz.path1Title}</h3>
+          <p>{t.crackz.path1Body}</p>
+          <ul>
+            <li>{t.crackz.path1Bullet1}</li>
+            <li>{t.crackz.path1Bullet2}</li>
+            <li>{t.crackz.path1Bullet3}</li>
+          </ul>
+        </article>
+        <article class="path">
+          <span class="path__tag">{t.crackz.path2Tag}</span>
+          <h3 class="h3">{t.crackz.path2Title}</h3>
+          <p>{t.crackz.path2Body}</p>
+          <ul>
+            <li>{t.crackz.path2Bullet1}</li>
+            <li>{t.crackz.path2Bullet2}</li>
+            <li>{t.crackz.path2Bullet3}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities / Services -->
+  <section id="capabilities" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">{t.capabilities.eyebrow}</span>
+          <h2 class="h2">{t.capabilities.heading}</h2>
+          <p class="lede">{t.capabilities.lede}</p>
+        </div>
+      </div>
+      <div class="caps">
+        <div class="cap">
+          <span class="cap__index">01 / 06</span>
+          <div class="cap__title">{t.capabilities.cap1Title}</div>
+          <div class="cap__body">{t.capabilities.cap1Body}</div>
+          <div class="cap__tags"><span class="cap__tag">PyTorch</span><span class="cap__tag">Segmentation</span><span class="cap__tag">MLOps</span><span class="cap__tag">NLP</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">02 / 06</span>
+          <div class="cap__title">{t.capabilities.cap2Title}</div>
+          <div class="cap__body">{t.capabilities.cap2Body}</div>
+          <div class="cap__tags"><span class="cap__tag">Microservices</span><span class="cap__tag">DDD</span><span class="cap__tag">API design</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">03 / 06</span>
+          <div class="cap__title">{t.capabilities.cap3Title}</div>
+          <div class="cap__body">{t.capabilities.cap3Body}</div>
+          <div class="cap__tags"><span class="cap__tag">AWS</span><span class="cap__tag">Azure</span><span class="cap__tag">GCP</span><span class="cap__tag">Kubernetes</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">04 / 06</span>
+          <div class="cap__title">{t.capabilities.cap4Title}</div>
+          <div class="cap__body">{t.capabilities.cap4Body}</div>
+          <div class="cap__tags"><span class="cap__tag">Unreal</span><span class="cap__tag">C++</span><span class="cap__tag">Photogrammetry</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">05 / 06</span>
+          <div class="cap__title">{t.capabilities.cap5Title}</div>
+          <div class="cap__body">{t.capabilities.cap5Body}</div>
+          <div class="cap__tags"><span class="cap__tag">Cleared</span><span class="cap__tag">Compliance</span><span class="cap__tag">CTO</span></div>
+        </div>
+        <div class="cap">
+          <span class="cap__index">06 / 06</span>
+          <div class="cap__title">{t.capabilities.cap6Title}</div>
+          <div class="cap__body">{t.capabilities.cap6Body}</div>
+          <div class="cap__tags"><span class="cap__tag">UAS</span><span class="cap__tag">LoRa</span><span class="cap__tag">APRS</span><span class="cap__tag">Edge AI</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="section section--tight" style="background: var(--bg-mantle); border-top: 1px solid var(--surface-0); border-bottom: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">{t.industries.eyebrow}</span>
+          <h2 class="h2">{t.industries.heading}</h2>
+        </div>
+      </div>
+      <div class="industries">
+        <article class="industry">
+          <div class="industry__top">
+            <div class="industry__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 20h18" /><path d="M5 20V8h4v12" /><path d="M15 20V12h4v8" />
+                <path d="M3 14l3-2 3 2" /><path d="M13 17l3-2 3 2" />
+              </svg>
+            </div>
+            <span class="industry__name">{t.industries.ind1Name}</span>
+          </div>
+          <h4>{t.industries.ind1Heading}</h4>
+          <p>{t.industries.ind1Body}</p>
+          <div class="industry__metrics">
+            <div class="industry__metric"><div class="num">{t.industries.ind1Metric1Num}</div><div class="lbl">{t.industries.ind1Metric1Lbl}</div></div>
+            <div class="industry__metric"><div class="num">{t.industries.ind1Metric2Num}</div><div class="lbl">{t.industries.ind1Metric2Lbl}</div></div>
+          </div>
+        </article>
+        <article class="industry">
+          <div class="industry__top">
+            <div class="industry__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20" /><path d="M4 12V8m4 4V6m4 6V4m4 8V6m4 6V8" /><path d="M2 18h20" />
+              </svg>
+            </div>
+            <span class="industry__name">{t.industries.ind2Name}</span>
+          </div>
+          <h4>{t.industries.ind2Heading}</h4>
+          <p>{t.industries.ind2Body}</p>
+          <div class="industry__metrics">
+            <div class="industry__metric"><div class="num">{t.industries.ind2Metric1Num}</div><div class="lbl">{t.industries.ind2Metric1Lbl}</div></div>
+            <div class="industry__metric"><div class="num">{t.industries.ind2Metric2Num}</div><div class="lbl">{t.industries.ind2Metric2Lbl}</div></div>
+          </div>
+        </article>
+        <article class="industry">
+          <div class="industry__top">
+            <div class="industry__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 20V10l5 3V7l5 4V4l8 16z" /><path d="M3 20h18" />
+              </svg>
+            </div>
+            <span class="industry__name">{t.industries.ind3Name}</span>
+          </div>
+          <h4>{t.industries.ind3Heading}</h4>
+          <p>{t.industries.ind3Body}</p>
+          <div class="industry__metrics">
+            <div class="industry__metric"><div class="num">{t.industries.ind3Metric1Num}</div><div class="lbl">{t.industries.ind3Metric1Lbl}</div></div>
+            <div class="industry__metric"><div class="num">{t.industries.ind3Metric2Num}</div><div class="lbl">{t.industries.ind3Metric2Lbl}</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section--tight">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">{t.projects.eyebrow}</span>
+          <h2 class="h2">{t.projects.heading}</h2>
+          <p class="lede">{t.projects.lede}</p>
+        </div>
+      </div>
+      <div class="projects">
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">01</span><span class="proj__status proj__status--live">{t.projects.proj1Status}</span></div>
+          <h3>Crackz</h3>
+          <p>{t.projects.proj1Body}</p>
+          <ul class="proj__bullets">
+            <li><span class="k">{t.projects.proj1K1}</span> {t.projects.proj1V1}</li>
+            <li><span class="k">{t.projects.proj1K2}</span> {t.projects.proj1V2}</li>
+            <li><span class="k">{t.projects.proj1K3}</span> {t.projects.proj1V3}</li>
+          </ul>
+        </article>
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">02</span><span class="proj__status proj__status--live">{t.projects.proj2Status}</span></div>
+          <h3>WreckGame</h3>
+          <p>{t.projects.proj2Body}</p>
+          <ul class="proj__bullets">
+            <li><span class="k">{t.projects.proj2K1}</span> {t.projects.proj2V1}</li>
+            <li><span class="k">{t.projects.proj2K2}</span> {t.projects.proj2V2}</li>
+            <li><span class="k">{t.projects.proj2K3}</span> {t.projects.proj2V3}</li>
+          </ul>
+        </article>
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">03</span><span class="proj__status proj__status--rnd">{t.projects.proj3Status}</span></div>
+          <h3>Ocean Discovery / SubBaltica</h3>
+          <p>{t.projects.proj3Body}</p>
+          <ul class="proj__bullets">
+            <li><span class="k">{t.projects.proj3K1}</span> {t.projects.proj3V1}</li>
+            <li><span class="k">{t.projects.proj3K2}</span> {t.projects.proj3V2}</li>
+            <li><span class="k">{t.projects.proj3K3}</span> {t.projects.proj3V3}</li>
+          </ul>
+        </article>
+        <article class="proj">
+          <div class="proj__head"><span class="proj__num">04</span><span class="proj__status proj__status--live">{t.projects.proj4Status}</span></div>
+          <h3>meshtop</h3>
+          <p>{t.projects.proj4Body}</p>
+          <ul class="proj__bullets">
+            <li><span class="k">{t.projects.proj4K1}</span> {t.projects.proj4V1}</li>
+            <li><span class="k">{t.projects.proj4K2}</span> {t.projects.proj4V2}</li>
+            <li><span class="k">{t.projects.proj4K3}</span> {t.projects.proj4V3}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="wrap about">
+      <div class="section-head__copy" style="align-self: start;">
+        <span class="eyebrow">{t.about.eyebrow}</span>
+        <h2 class="h2">{t.about.heading}</h2>
+      </div>
+      <div class="about__copy">
+        <p>{t.about.body1}</p>
+        <div class="about__signature">{t.about.signature}</div>
+        <p>{t.about.body2}</p>
+        <div class="about__meta">
+          <div class="about__meta-item"><span class="k">{t.about.k1}</span><span class="v">{t.about.v1}</span></div>
+          <div class="about__meta-item"><span class="k">{t.about.k2}</span><span class="v mono">{t.about.v2}</span></div>
+          <div class="about__meta-item"><span class="k">{t.about.k3}</span><span class="v">{t.about.v3}</span></div>
+          <div class="about__meta-item"><span class="k">{t.about.k4}</span><span class="v">{t.about.v4}</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI CONSULTING -->
+  <section id="consulting" class="section" style="background: var(--bg-base); border-top: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">{t.consulting.eyebrow}</span>
+          <h2 class="h2">{t.consulting.heading}</h2>
+          <p class="lede">{t.consulting.lede}</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; align-self: flex-end;">
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); letter-spacing: var(--tracking-wide);">{t.consulting.clearanceNote}</div>
+          <div class="hero__ctas">
+            <a href="#engagements" class="btn btn--primary">{t.consulting.ctaEngagements}</a>
+            <a href="#contact" class="btn btn--ghost">{t.consulting.ctaTalk}</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services grid -->
+      <div id="services" class="services">
+        <article class="service">
+          <div class="service__head"><span class="service__num">01</span><div class="service__title-block"><h3 class="service__title">{t.consulting.svc1Title}</h3><div class="service__one">{t.consulting.svc1One}</div></div></div>
+          <p class="service__body">{t.consulting.svc1Body}</p>
+          <div class="service__deliver"><span class="service__deliver-label">{t.consulting.deliverLabel}</span><ul>{t.consulting.svc1Deliver.split(' · ').map(item => <li>{item}</li>)}</ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">02</span><div class="service__title-block"><h3 class="service__title">{t.consulting.svc2Title}</h3><div class="service__one">{t.consulting.svc2One}</div></div></div>
+          <p class="service__body">{t.consulting.svc2Body}</p>
+          <div class="service__deliver"><span class="service__deliver-label">{t.consulting.deliverLabel}</span><ul>{t.consulting.svc2Deliver.split(' · ').map(item => <li>{item}</li>)}</ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">03</span><div class="service__title-block"><h3 class="service__title">{t.consulting.svc3Title}</h3><div class="service__one">{t.consulting.svc3One}</div></div></div>
+          <p class="service__body">{t.consulting.svc3Body}</p>
+          <div class="service__deliver"><span class="service__deliver-label">{t.consulting.deliverLabel}</span><ul>{t.consulting.svc3Deliver.split(' · ').map(item => <li>{item}</li>)}</ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">04</span><div class="service__title-block"><h3 class="service__title">{t.consulting.svc4Title}</h3><div class="service__one">{t.consulting.svc4One}</div></div></div>
+          <p class="service__body">{t.consulting.svc4Body}</p>
+          <div class="service__deliver"><span class="service__deliver-label">{t.consulting.deliverLabel}</span><ul>{t.consulting.svc4Deliver.split(' · ').map(item => <li>{item}</li>)}</ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">05</span><div class="service__title-block"><h3 class="service__title">{t.consulting.svc5Title}</h3><div class="service__one">{t.consulting.svc5One}</div></div></div>
+          <p class="service__body">{t.consulting.svc5Body}</p>
+          <div class="service__deliver"><span class="service__deliver-label">{t.consulting.deliverLabel}</span><ul>{t.consulting.svc5Deliver.split(' · ').map(item => <li>{item}</li>)}</ul></div>
+        </article>
+        <article class="service">
+          <div class="service__head"><span class="service__num">06</span><div class="service__title-block"><h3 class="service__title">{t.consulting.svc6Title}</h3><div class="service__one">{t.consulting.svc6One}</div></div></div>
+          <p class="service__body">{t.consulting.svc6Body}</p>
+          <div class="service__deliver"><span class="service__deliver-label">{t.consulting.deliverLabel}</span><ul>{t.consulting.svc6Deliver.split(' · ').map(item => <li>{item}</li>)}</ul></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement models -->
+  <section id="engagements" class="section section--tight" style="background: var(--bg-mantle); border-top: 1px solid var(--surface-0); border-bottom: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-head__copy">
+          <span class="eyebrow">{t.engagements.eyebrow}</span>
+          <h2 class="h2">{t.engagements.heading}</h2>
+          <p class="lede">{t.engagements.lede}</p>
+        </div>
+      </div>
+      <div class="engagements">
+        <article class="eng">
+          <span class="eng__num">{t.engagements.eng1Num}</span>
+          <h3 class="eng__title">{t.engagements.eng1Title}</h3>
+          <p class="eng__sub">{t.engagements.eng1Sub}</p>
+          <p class="eng__pricing-note">{t.engagements.pricingNote}</p>
+          <ul class="eng__list">
+            <li>{t.engagements.eng1B1}</li>
+            <li>{t.engagements.eng1B2}</li>
+            <li>{t.engagements.eng1B3}</li>
+            <li>{t.engagements.eng1B4}</li>
+            <li>{t.engagements.eng1B5}</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">{t.engagements.eng1Cta}</a>
+        </article>
+        <article class="eng eng--feat">
+          <span class="eng__num">{t.engagements.eng2Num}</span>
+          <h3 class="eng__title">{t.engagements.eng2Title}</h3>
+          <p class="eng__sub">{t.engagements.eng2Sub}</p>
+          <p class="eng__pricing-note">{t.engagements.pricingNote}</p>
+          <ul class="eng__list">
+            <li>{t.engagements.eng2B1}</li>
+            <li>{t.engagements.eng2B2}</li>
+            <li>{t.engagements.eng2B3}</li>
+            <li>{t.engagements.eng2B4}</li>
+            <li>{t.engagements.eng2B5}</li>
+            <li>{t.engagements.eng2B6}</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">{t.engagements.eng2Cta}</a>
+        </article>
+        <article class="eng">
+          <span class="eng__num">{t.engagements.eng3Num}</span>
+          <h3 class="eng__title">{t.engagements.eng3Title}</h3>
+          <p class="eng__sub">{t.engagements.eng3Sub}</p>
+          <p class="eng__pricing-note">{t.engagements.pricingNote}</p>
+          <ul class="eng__list">
+            <li>{t.engagements.eng3B1}</li>
+            <li>{t.engagements.eng3B2}</li>
+            <li>{t.engagements.eng3B3}</li>
+            <li>{t.engagements.eng3B4}</li>
+            <li>{t.engagements.eng3B5}</li>
+            <li>{t.engagements.eng3B6}</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost">{t.engagements.eng3Cta}</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="section section--tight">
+    <div class="wrap">
+      <div class="cta">
+        <div class="cta__bg"></div>
+        <div class="cta__inner">
+          <div>
+            <span class="eyebrow">{t.contact.eyebrow}</span>
+            <h2 class="h2" style="margin-top: 14px;">{t.contact.heading}</h2>
+            <p class="cta__lede">{t.contact.lede}</p>
+          </div>
+          <div class="cta__contact">
+            <div>
+              <div class="cta__contact-label">{t.contact.contactLabel}</div>
+              <div class="cta__email">theresia.lundgren@anaxiatech.se</div>
+            </div>
+            <a href={`mailto:theresia.lundgren@anaxiatech.se?subject=${t.contact.mailSubject}`} class="btn btn--primary">{t.contact.ctaMail}</a>
+            <div class="cta__rows">
+              <div class="cta__row"><span class="k">{t.contact.k1}</span><span>{t.contact.v1}</span></div>
+              <div class="cta__row"><span class="k">{t.contact.k2}</span><span>{t.contact.v2}</span></div>
+              <div class="cta__row"><span class="k">{t.contact.k3}</span><span>{t.contact.v3}</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    html { scroll-behavior: smooth; }
+  </style>
+
+</Base>

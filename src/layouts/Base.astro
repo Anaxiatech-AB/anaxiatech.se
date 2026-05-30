@@ -5,14 +5,19 @@ import '../styles/site.css';
 interface Props {
   title: string;
   description?: string;
+  lang?: 'en' | 'sv';
 }
 const {
   title,
   description = 'Anaxiatech AB — AI-driven defect detection for infrastructure and manufacturing.',
+  lang = 'en',
 } = Astro.props;
+
+const altLang = lang === 'en' ? 'sv' : 'en';
+const altPath = `/${altLang}`;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,11 +27,14 @@ const {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
+  <link rel="alternate" hreflang="en" href="https://anaxiatech.se/en" />
+  <link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv" />
+  <link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en" />
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav__inner">
-      <a href="/" class="nav__brand">
+      <a href={`/${lang}`} class="nav__brand">
         <span class="nav__brand-mark">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square">
             <path d="M3 4 L11 12 L7 12 L17 21" />
@@ -36,14 +44,19 @@ const {
         <span>Anaxiatech<span class="nav__brand-tld">.se</span></span>
       </a>
       <div class="nav__links">
-        <a href="/#crackz">Crackz</a>
-        <a href="#consulting">Consulting</a>
-        <a href="/#capabilities">Services</a>
-        <a href="/#industries">Industries</a>
-        <a href="/#projects">Projects</a>
-        <a href="/#about">About</a>
+        <a href={`/${lang}#crackz`}>Crackz</a>
+        <a href={`/${lang}#consulting`}>{lang === 'en' ? 'Consulting' : 'Konsulting'}</a>
+        <a href={`/${lang}#capabilities`}>{lang === 'en' ? 'Services' : 'Tjänster'}</a>
+        <a href={`/${lang}#industries`}>{lang === 'en' ? 'Industries' : 'Branscher'}</a>
+        <a href={`/${lang}#projects`}>{lang === 'en' ? 'Projects' : 'Projekt'}</a>
+        <a href={`/${lang}#about`}>{lang === 'en' ? 'About' : 'Om oss'}</a>
       </div>
       <div class="nav__cta">
+        <div class="lang-switcher">
+          <a href="/en" class={`lang-switcher__btn${lang === 'en' ? ' lang-switcher__btn--active' : ''}`} data-lang="en">EN</a>
+          <span class="lang-switcher__sep">·</span>
+          <a href="/sv" class={`lang-switcher__btn${lang === 'sv' ? ' lang-switcher__btn--active' : ''}`} data-lang="sv">SV</a>
+        </div>
         <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
             <line x1="2" y1="5" x2="18" y2="5"/>
@@ -51,7 +64,7 @@ const {
             <line x1="2" y1="15" x2="18" y2="15"/>
           </svg>
         </button>
-        <a href="/#contact" class="btn btn--primary">Contact sales</a>
+        <a href={`/${lang}#contact`} class="btn btn--primary">{lang === 'en' ? 'Contact sales' : 'Kontakta oss'}</a>
       </div>
     </div>
   </nav>
@@ -63,13 +76,18 @@ const {
         <button class="mobile-menu__close" aria-label="Close menu">&#x2715;</button>
       </div>
       <nav class="mobile-menu__links">
-        <a href="/#crackz">Crackz</a>
-        <a href="#consulting">Consulting</a>
-        <a href="/#capabilities">Services</a>
-        <a href="/#industries">Industries</a>
-        <a href="/#projects">Projects</a>
-        <a href="/#about">About</a>
-        <a href="/#contact" class="btn btn--primary" style="margin-top: 12px; justify-content: center;">Contact sales</a>
+        <a href={`/${lang}#crackz`}>Crackz</a>
+        <a href={`/${lang}#consulting`}>{lang === 'en' ? 'Consulting' : 'Konsulting'}</a>
+        <a href={`/${lang}#capabilities`}>{lang === 'en' ? 'Services' : 'Tjänster'}</a>
+        <a href={`/${lang}#industries`}>{lang === 'en' ? 'Industries' : 'Branscher'}</a>
+        <a href={`/${lang}#projects`}>{lang === 'en' ? 'Projects' : 'Projekt'}</a>
+        <a href={`/${lang}#about`}>{lang === 'en' ? 'About' : 'Om oss'}</a>
+        <a href={`/${lang}#contact`} class="btn btn--primary" style="margin-top: 12px; justify-content: center;">{lang === 'en' ? 'Contact sales' : 'Kontakta oss'}</a>
+        <div class="lang-switcher" style="margin-top: 16px; justify-content: center;">
+          <a href="/en" class={`lang-switcher__btn${lang === 'en' ? ' lang-switcher__btn--active' : ''}`} data-lang="en">EN</a>
+          <span class="lang-switcher__sep">·</span>
+          <a href="/sv" class={`lang-switcher__btn${lang === 'sv' ? ' lang-switcher__btn--active' : ''}`} data-lang="sv">SV</a>
+        </div>
       </nav>
     </div>
   </div>
@@ -82,39 +100,41 @@ const {
         <div>
           <div class="footer__brand">Anaxiatech AB</div>
           <p class="kicker" style="margin-top: 10px; max-width: 38ch;">
-            Engineering systems that work — above and below the surface. Stockholm-based.
+            {lang === 'en'
+              ? 'Engineering systems that work — above and below the surface. Stockholm-based.'
+              : 'Vi bygger system som håller — ovan och under ytan. Stockholmsbaserade.'}
           </p>
         </div>
         <div class="footer__col">
-          <h5>Product</h5>
+          <h5>{lang === 'en' ? 'Product' : 'Produkt'}</h5>
           <ul>
-            <li><a href="/#crackz">Crackz</a></li>
-            <li><a href="/#tour">Product tour</a></li>
-            <li><a href="/#industries">Industries</a></li>
-            <li><a href="/#contact">Pricing</a></li>
+            <li><a href={`/${lang}#crackz`}>Crackz</a></li>
+            <li><a href={`/${lang}#tour`}>{lang === 'en' ? 'Product tour' : 'Produktgenomgång'}</a></li>
+            <li><a href={`/${lang}#industries`}>{lang === 'en' ? 'Industries' : 'Branscher'}</a></li>
+            <li><a href={`/${lang}#contact`}>{lang === 'en' ? 'Pricing' : 'Prissättning'}</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h5>Company</h5>
+          <h5>{lang === 'en' ? 'Company' : 'Företag'}</h5>
           <ul>
-            <li><a href="/#about">About</a></li>
-            <li><a href="/#projects">Projects</a></li>
-            <li><a href="/#capabilities">Capabilities</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href={`/${lang}#about`}>{lang === 'en' ? 'About' : 'Om oss'}</a></li>
+            <li><a href={`/${lang}#projects`}>{lang === 'en' ? 'Projects' : 'Projekt'}</a></li>
+            <li><a href={`/${lang}#capabilities`}>{lang === 'en' ? 'Capabilities' : 'Kapacitet'}</a></li>
+            <li><a href={`/${lang}#contact`}>{lang === 'en' ? 'Contact' : 'Kontakt'}</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h5>Consulting</h5>
+          <h5>{lang === 'en' ? 'Consulting' : 'Konsulting'}</h5>
           <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#engagements">Engagements</a></li>
-            <li><a href="#contact">Get in touch</a></li>
+            <li><a href={`/${lang}#services`}>{lang === 'en' ? 'Services' : 'Tjänster'}</a></li>
+            <li><a href={`/${lang}#engagements`}>{lang === 'en' ? 'Engagements' : 'Uppdragsmodeller'}</a></li>
+            <li><a href={`/${lang}#contact`}>{lang === 'en' ? 'Get in touch' : 'Kontakta oss'}</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© {new Date().getFullYear()} Anaxiatech AB · Org.nr 556673-0056</span>
-        <span>Crackz™ is a trademark of Anaxiatech AB</span>
+        <span>{lang === 'en' ? 'Crackz™ is a trademark of Anaxiatech AB' : 'Crackz™ är ett varumärke som tillhör Anaxiatech AB'}</span>
       </div>
     </div>
   </footer>
@@ -143,6 +163,16 @@ const {
       if (e.target === menu) closeMenu();
     });
     menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // Language switcher: set cookie on click
+    document.querySelectorAll('.lang-switcher__btn').forEach(el => {
+      el.addEventListener('click', () => {
+        const chosenLang = (el as HTMLElement).dataset.lang;
+        if (chosenLang) {
+          document.cookie = `lang=${chosenLang}; path=/; max-age=31536000; SameSite=Lax`;
+        }
+      });
+    });
   </script>
 </body>
 </html>
