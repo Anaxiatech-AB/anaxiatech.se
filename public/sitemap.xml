@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://anaxiatech.se/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en"/>
+    <loc>https://anaxiatech.se/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://anaxiatech.se/sv</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en"/>
+    <loc>https://anaxiatech.se/sv/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/"/>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
