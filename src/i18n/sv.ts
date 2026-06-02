@@ -139,6 +139,11 @@ export const t: Translations = {
     proj4K1: 'Domän', proj4V1: 'Mesh-radio · Fältoperationer',
     proj4K2: 'Stack', proj4V2: 'Python · LoRa · APRS · BLE',
     proj4K3: 'Status', proj4V3: 'github.com/theresiasnow/meshtop',
+    proj5Status: 'Under utveckling',
+    proj5Body: 'Local-first katalog- och inmatningsplattform för marina survey-data — flyttar fältinsamlingar från inbox till kanonisk projektlagring med geotaggning, automatiserade pipelines och en kartbaserad operatörsdashboard. Byggd för subsea-expeditioner och matar in i det bredare Crackz-programmet.',
+    proj5K1: 'Domän', proj5V1: 'Subsea survey · Datapipelines',
+    proj5K2: 'Stack', proj5V2: 'Python · FastAPI · React · Temporal · PostGIS',
+    proj5K3: 'Status', proj5V3: 'Under utveckling',
   },
   about: {
     eyebrow: 'Om Anaxiatech',

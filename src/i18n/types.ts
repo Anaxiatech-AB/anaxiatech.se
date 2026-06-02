@@ -137,6 +137,11 @@ export interface Translations {
     proj4K1: string; proj4V1: string;
     proj4K2: string; proj4V2: string;
     proj4K3: string; proj4V3: string;
+    proj5Status: string;
+    proj5Body: string;
+    proj5K1: string; proj5V1: string;
+    proj5K2: string; proj5V2: string;
+    proj5K3: string; proj5V3: string;
   };
   about: {
     eyebrow: string;
