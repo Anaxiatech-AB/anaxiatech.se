@@ -841,6 +841,12 @@ button { font-family: inherit; cursor: pointer; }
   display: inline-block;
   width: 110px;
 }
+.proj__shot {
+  display: block;
+  width: calc(100% + 64px);
+  margin: -32px -32px 6px;
+  border-bottom: 1px solid var(--surface-0);
+}
 @media (max-width: 720px) {
   .projects { grid-template-columns: 1fr; }
 }
