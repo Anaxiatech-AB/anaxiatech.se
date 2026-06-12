@@ -27,9 +27,10 @@ const altPath = `/${altLang}`;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <link rel="alternate" hreflang="en" href="https://anaxiatech.se/en" />
-  <link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv" />
-  <link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en" />
+  <link rel="canonical" href={new URL(Astro.url.pathname, 'https://anaxiatech.se').href} />
+  <link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/" />
+  <link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/" />
+  <link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/" />
 </head>
 <body>
   <nav class="nav">
