@@ -1,0 +1,10 @@
+---
+import Base from '../../../layouts/Base.astro';
+import AiSlam from '../../../components/AiSlam.astro';
+import { strings } from '../../../i18n/products';
+
+const t = strings['en'];
+---
+<Base title={t.meta.title} description={t.meta.description} lang="en">
+  <AiSlam lang="en" />
+</Base>
