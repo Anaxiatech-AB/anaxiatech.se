@@ -71,6 +71,21 @@ export interface Translations {
     path2Bullet2: string;
     path2Bullet3: string;
   };
+  surveyOps: {
+    eyebrow: string;
+    heading: string;
+    sub: string;
+    lede: string;
+    ctaLearn: string;
+    ctaDemo: string;
+    stat1Value: string; stat1Label: string; stat1Caption: string;
+    stat2Value: string; stat2Label: string; stat2Caption: string;
+    stat3Value: string; stat3Label: string; stat3Caption: string;
+    step1Title: string; step1Body: string;
+    step2Title: string; step2Body: string;
+    step3Title: string; step3Body: string;
+    step4Title: string; step4Body: string;
+  };
   capabilities: {
     eyebrow: string;
     heading: string;

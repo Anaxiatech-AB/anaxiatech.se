@@ -175,6 +175,95 @@ import { t } from '../../i18n/en';
     </div>
   </section>
 
+  <!-- Survey Ops product section -->
+  <section id="survey-ops" class="section product" style="background: var(--bg-mantle); border-top: 1px solid var(--surface-0);">
+    <div class="wrap">
+      <div class="product__header">
+        <div class="product__title">
+          <div>
+            <span class="eyebrow">Marine survey platform · v1</span>
+            <h2>Survey Ops.</h2>
+            <p class="product__sub">
+              Every capture, from field to archive — catalogued, geotagged, and ready for analysis.
+              The data backbone of the AI Slam platform, built for subsea expeditions.
+            </p>
+          </div>
+        </div>
+        <div class="product__copy">
+          <p class="lede">
+            Resumable field uploads over Starlink. Operator inbox approval. USBL geotagging.
+            Geospatial map of every capture. Natural-language search with cited answers.
+          </p>
+          <div class="hero__ctas">
+            <a href="/en/products/" class="btn btn--primary">Learn more</a>
+            <a href="#contact" class="btn btn--ghost">Request a demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stats__item">
+          <div class="stats__value">100<span class="unit">%</span></div>
+          <div class="stats__label">Offline-capable</div>
+          <div class="stats__caption">runs on operator hardware, no cloud dependency</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">tus</div>
+          <div class="stats__label">Resumable upload</div>
+          <div class="stats__caption">survives connection drops over Starlink</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__value">RAG</div>
+          <div class="stats__label">Natural-language search</div>
+          <div class="stats__caption">ask questions of the archive with cited answers</div>
+        </div>
+      </div>
+
+      <!-- Screenshots: map view + project detail side by side -->
+      <div class="slam-together" style="margin-top: 48px;">
+        <div class="slam-together__panel">
+          <div class="tour__window-chrome">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="title mono">survey-ops · catalog map</span>
+          </div>
+          <img class="slam-together__shot" src="/assets/survey-ops-map.png"
+               alt="Survey Ops catalog map — all captures plotted by project across the Baltic Sea"
+               width="2000" height="1411" loading="lazy" decoding="async" />
+          <div class="slam-together__caption">Catalog · geospatial map view</div>
+        </div>
+        <div class="slam-together__panel">
+          <div class="tour__window-chrome">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="title mono">survey-ops · project detail</span>
+          </div>
+          <img class="slam-together__shot" src="/assets/survey-ops-project.png"
+               alt="Survey Ops project detail — SS Franken survey with embedded map, metadata and description"
+               width="2000" height="1411" loading="lazy" decoding="async" />
+          <div class="slam-together__caption">Project detail · SS Franken survey</div>
+        </div>
+      </div>
+
+      <div class="workflow" style="margin-top: 48px;">
+        <div class="workflow__step">
+          <h4>Field upload</h4>
+          <p>Browser or CLI upload from vessel or shore. Resumable over Starlink — a dropped connection never loses progress.</p>
+        </div>
+        <div class="workflow__step">
+          <h4>Inbox &amp; approval</h4>
+          <p>Packages stage in an inbox. AI pre-fills metadata from the file listing; an operator approves before anything reaches canonical storage.</p>
+        </div>
+        <div class="workflow__step">
+          <h4>Geotag &amp; catalog</h4>
+          <p>USBL track data writes real GPS positions onto images. Every capture indexed by project, site, date, and geolocation — visible on a live map.</p>
+        </div>
+        <div class="workflow__step">
+          <h4>Search &amp; analyse</h4>
+          <p>Ask questions in natural language. Answers are grounded in the archive with source citations. Hand structured captures to Crackz for defect detection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Capabilities / Services -->
   <section id="capabilities" class="section">
     <div class="wrap">
