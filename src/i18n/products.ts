@@ -22,8 +22,8 @@ export interface ProductsCopy {
     step4Title: string; step4Body: string;
     step5Title: string; step5Body: string;
   };
-  together: { eyebrow: string; heading: string; caption: string; surveyAlt: string; crackzAlt: string };
-  vision: { eyebrow: string; heading: string; body: string; pill: string; cta: string };
+  together: { eyebrow: string; heading: string; caption: string; surveyAlt: string; crackzAlt: string; surveyCaption: string; crackzCaption: string };
+  vision: { eyebrow: string; heading: string; body: string; pill: string; cta: string; ctaSecondary: string };
 }
 
 export const strings: Record<'en' | 'sv', ProductsCopy> = {
@@ -106,6 +106,8 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       surveyAlt: "Survey Ops Portal full-page map view — capture clusters by project",
       crackzAlt:
         "Crackz detection run — severity grid with annotated defect images",
+      surveyCaption: "Survey Ops · catalog & geospatial map",
+      crackzCaption: "Crackz · defect detection results",
     },
     vision: {
       eyebrow: "Platform status",
@@ -113,6 +115,7 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       body: "Both products ship today as independent systems. Survey Ops is in active production use for marine survey data management. Crackz is in production across harbor infrastructure, bridge inspection, and manufacturing QA. The platform integration — automatic handoff from catalog to detection engine and annotations back — is the designed next phase of AI Slam.",
       pill: "Vision · in progress",
       cta: "Talk to us about the roadmap",
+      ctaSecondary: "Explore Crackz",
     },
   },
 
@@ -195,6 +198,8 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       surveyAlt: "Survey Ops Portal helsideskartvvy — inspelningskluster per projekt",
       crackzAlt:
         "Crackz detekteringskörning — allvarlighetsgrid med annoterade defektbilder",
+      surveyCaption: "Survey Ops · katalog & geospatial karta",
+      crackzCaption: "Crackz · defekteringsresultat",
     },
     vision: {
       eyebrow: "Plattformsstatus",
@@ -202,6 +207,7 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       body: "Båda produkterna levereras idag som fristående system. Survey Ops används aktivt i produktion för hantering av marin surveydata. Crackz är i produktion inom hamninfrastruktur, broinspektion och tillverknings-QA. Plattformsintegrationen — automatisk överlämning från katalog till detekteringsmotor och annoteringar tillbaka — är den designade nästa fasen av AI Slam.",
       pill: "Vision · pågår",
       cta: "Prata med oss om färdplanen",
+      ctaSecondary: "Utforska Crackz",
     },
   },
 };

@@ -184,7 +184,7 @@ const t = strings[lang];
         <img class="slam-together__shot" src="/assets/survey-ops-full.png"
              alt={t.together.surveyAlt} width="1280" height="812"
              loading="lazy" decoding="async" />
-        <div class="slam-together__caption">Survey Ops · catalog &amp; geospatial map</div>
+        <div class="slam-together__caption">{t.together.surveyCaption}</div>
       </div>
       <div class="slam-together__panel">
         <div class="tour__window-chrome">
@@ -194,7 +194,7 @@ const t = strings[lang];
         <img class="slam-together__shot" src="/assets/gui/detection_run_view.png"
              alt={t.together.crackzAlt} width="1280" height="800"
              loading="lazy" decoding="async" />
-        <div class="slam-together__caption">Crackz · defect detection results</div>
+        <div class="slam-together__caption">{t.together.crackzCaption}</div>
       </div>
     </div>
   </div>
@@ -210,7 +210,7 @@ const t = strings[lang];
       <p class="lede" style="margin-bottom:32px;">{t.vision.body}</p>
       <div class="hero__ctas">
         <a href={`/${lang}#contact`} class="btn btn--primary">{t.vision.cta}</a>
-        <a href={`/${lang}#crackz`} class="btn btn--outline">{lang === 'en' ? 'Explore Crackz' : 'Utforska Crackz'}</a>
+        <a href={`/${lang}#crackz`} class="btn btn--outline">{t.vision.ctaSecondary}</a>
       </div>
     </div>
   </div>
