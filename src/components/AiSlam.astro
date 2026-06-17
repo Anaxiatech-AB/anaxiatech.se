@@ -1,0 +1,221 @@
+---
+import { strings } from '../i18n/products';
+interface Props { lang: 'en' | 'sv'; }
+const { lang } = Astro.props;
+const t = strings[lang];
+---
+
+<!-- SECTION 1: HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <span class="eyebrow">{t.hero.eyebrow}</span>
+        <h1 class="h1 hero__title">
+          {t.hero.title} <span class="accent">{t.hero.titleAccent}</span>
+        </h1>
+        <p class="lede hero__lede">{t.hero.lede}</p>
+        <div class="hero__ctas">
+          <a href={`/${lang}#contact`} class="btn btn--primary">{t.hero.ctaContact}</a>
+          <a href={`/${lang}#crackz`} class="btn btn--ghost">{t.hero.ctaCrackz}</a>
+        </div>
+      </div>
+      <!-- No hero visual image on this page — keep visual weight on the diagram below -->
+    </div>
+  </div>
+</header>
+
+<!-- SECTION 2: THE TWO HALVES -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__copy">
+        <span class="eyebrow">{t.products.eyebrow}</span>
+        <h2 class="h2">{t.products.heading}</h2>
+        <p class="lede">{t.products.lede}</p>
+      </div>
+    </div>
+    <div class="industries">
+      <!-- Survey Ops card -->
+      <article class="industry">
+        <img src="/assets/survey-ops.webp" alt={t.products.surveyImgAlt}
+             width="1280" height="812" loading="lazy" decoding="async"
+             style="width:100%;height:160px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:8px;" />
+        <div class="industry__top">
+          <span class="industry__name">{t.products.surveyEyebrow}</span>
+        </div>
+        <h4>{t.products.surveyHeading}</h4>
+        <p>{t.products.surveyBody}</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.surveyFeature1}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.surveyFeature2}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.surveyFeature3}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.surveyFeature4}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.surveyFeature5}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.surveyFeature6}</li>
+        </ul>
+      </article>
+
+      <!-- Crackz card -->
+      <article class="industry">
+        <img src="/assets/gui/detection_run_view.png" alt={t.products.crackzImgAlt}
+             width="1280" height="800" loading="lazy" decoding="async"
+             style="width:100%;height:160px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:8px;" />
+        <div class="industry__top">
+          <span class="industry__name">{t.products.crackzEyebrow}</span>
+        </div>
+        <h4>{t.products.crackzHeading}</h4>
+        <p>{t.products.crackzBody}</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;">
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.crackzFeature1}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.crackzFeature2}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.crackzFeature3}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.crackzFeature4}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.crackzFeature5}</li>
+          <li style="font-size:13px;color:var(--fg-2);font-family:var(--font-mono);">· {t.products.crackzFeature6}</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: INTEGRATION FLOW -->
+<section class="section" style="background:var(--bg-mantle);border-top:1px solid var(--surface-0);border-bottom:1px solid var(--surface-0);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__copy">
+        <span class="eyebrow">{t.flow.eyebrow}</span>
+        <h2 class="h2">{t.flow.heading}</h2>
+        <p class="lede">{t.flow.lede}</p>
+      </div>
+    </div>
+
+    <!-- Animated flow diagram -->
+    <div class="flow">
+      <div class="flow__node">
+        <div class="flow__chip">
+          <span class="flow__index">00</span>
+          <span class="flow__label">{t.flow.node0}</span>
+        </div>
+      </div>
+      <div class="flow__connector" aria-hidden="true"></div>
+      <div class="flow__node">
+        <div class="flow__chip">
+          <span class="flow__index">01</span>
+          <span class="flow__label">{t.flow.node1}</span>
+        </div>
+      </div>
+      <div class="flow__connector" aria-hidden="true"></div>
+      <div class="flow__node">
+        <div class="flow__chip">
+          <span class="flow__index">02</span>
+          <span class="flow__label">{t.flow.node2}</span>
+        </div>
+      </div>
+      <div class="flow__connector" aria-hidden="true"></div>
+      <div class="flow__node">
+        <div class="flow__chip">
+          <span class="flow__index">03</span>
+          <span class="flow__label">{t.flow.node3}</span>
+        </div>
+      </div>
+      <div class="flow__connector" aria-hidden="true"></div>
+      <div class="flow__node">
+        <div class="flow__chip">
+          <span class="flow__index">04</span>
+          <span class="flow__label">{t.flow.node4}</span>
+        </div>
+      </div>
+      <div class="flow__connector" aria-hidden="true"></div>
+      <div class="flow__node">
+        <div class="flow__chip">
+          <span class="flow__index">05</span>
+          <span class="flow__label">{t.flow.node5}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Workflow steps below the diagram -->
+    <div class="workflow" style="margin-top:40px;">
+      <div class="workflow__step">
+        <h4>{t.flow.step0Title}</h4>
+        <p>{t.flow.step0Body}</p>
+      </div>
+      <div class="workflow__step">
+        <h4>{t.flow.step1Title}</h4>
+        <p>{t.flow.step1Body}</p>
+      </div>
+      <div class="workflow__step">
+        <h4>{t.flow.step2Title}</h4>
+        <p>{t.flow.step2Body}</p>
+      </div>
+      <div class="workflow__step">
+        <h4>{t.flow.step3Title}</h4>
+        <p>{t.flow.step3Body}</p>
+      </div>
+      <div class="workflow__step">
+        <h4>{t.flow.step4Title}</h4>
+        <p>{t.flow.step4Body}</p>
+      </div>
+      <div class="workflow__step">
+        <h4>{t.flow.step5Title}</h4>
+        <p>{t.flow.step5Body}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: SEEING IT TOGETHER -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__copy">
+        <span class="eyebrow">{t.together.eyebrow}</span>
+        <h2 class="h2">{t.together.heading}</h2>
+        <p class="lede">{t.together.caption}</p>
+      </div>
+    </div>
+    <div class="slam-together">
+      <div class="slam-together__panel">
+        <div class="tour__window-chrome">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="title mono">survey-ops · map view</span>
+        </div>
+        <img class="slam-together__shot" src="/assets/survey-ops-full.png"
+             alt={t.together.surveyAlt} width="1280" height="812"
+             loading="lazy" decoding="async" />
+        <div class="slam-together__caption">Survey Ops · catalog &amp; geospatial map</div>
+      </div>
+      <div class="slam-together__panel">
+        <div class="tour__window-chrome">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <span class="title mono">crackz-gui · detection run</span>
+        </div>
+        <img class="slam-together__shot" src="/assets/gui/detection_run_view.png"
+             alt={t.together.crackzAlt} width="1280" height="800"
+             loading="lazy" decoding="async" />
+        <div class="slam-together__caption">Crackz · defect detection results</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: VISION BAND -->
+<section class="section section--tight" style="background:var(--bg-mantle);border-top:1px solid var(--surface-0);">
+  <div class="wrap">
+    <div style="max-width:640px;">
+      <span class="vision-pill">{t.vision.pill}</span>
+      <span class="eyebrow" style="display:block;margin-bottom:16px;">{t.vision.eyebrow}</span>
+      <h2 class="h2" style="margin-bottom:20px;">{t.vision.heading}</h2>
+      <p class="lede" style="margin-bottom:32px;">{t.vision.body}</p>
+      <div class="hero__ctas">
+        <a href={`/${lang}#contact`} class="btn btn--primary">{t.vision.cta}</a>
+        <a href={`/${lang}#crackz`} class="btn btn--outline">{lang === 'en' ? 'Explore Crackz' : 'Utforska Crackz'}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  html { scroll-behavior: smooth; }
+</style>
