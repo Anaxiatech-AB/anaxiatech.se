@@ -103,7 +103,7 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       heading: "Catalog on the left. Detection on the right.",
       caption:
         "Survey Ops shows every capture on a geospatial map, with natural-language search over the archive. Crackz surfaces per-image defect findings with severity scoring. AI Slam is the bridge.",
-      surveyAlt: "Survey Ops Portal full-page map view — capture clusters by project",
+      surveyAlt: "Survey Ops Portal — project detail page showing SS Franken survey with geospatial map and metadata",
       crackzAlt:
         "Crackz detection run — severity grid with annotated defect images",
       surveyCaption: "Survey Ops · catalog & geospatial map",
@@ -195,7 +195,7 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       heading: "Katalogen till vänster. Detekteringen till höger.",
       caption:
         "Survey Ops visar varje inspelning på en geospatial karta, med naturspråkssökning över arkivet. Crackz lyfter fram defektfynd per bild med allvarlighetsbedömning. AI Slam är bryggan.",
-      surveyAlt: "Survey Ops Portal helsideskartvvy — inspelningskluster per projekt",
+      surveyAlt: "Survey Ops Portal — projektdetaljsida för SS Franken-survey med geospatial karta och metadata",
       crackzAlt:
         "Crackz detekteringskörning — allvarlighetsgrid med annoterade defektbilder",
       surveyCaption: "Survey Ops · katalog & geospatial karta",
