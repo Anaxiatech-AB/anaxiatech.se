@@ -850,6 +850,10 @@ button { font-family: inherit; cursor: pointer; }
   margin: -32px -32px 20px;
   border-bottom: 1px solid var(--surface-0);
 }
+video.proj__shot {
+  object-position: center;
+  background: #06090f;
+}
 @media (max-width: 720px) {
   .projects { grid-template-columns: 1fr; }
 }

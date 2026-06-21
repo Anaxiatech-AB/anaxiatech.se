@@ -163,6 +163,11 @@ export const t: Translations = {
     proj5K1: 'Domän', proj5V1: 'Subsea survey · Datapipelines',
     proj5K2: 'Stack', proj5V2: 'Python · FastAPI · React · Temporal · PostGIS',
     proj5K3: 'Status', proj5V3: 'Under utveckling',
+    proj6Status: 'Kommer snart',
+    proj6Body: 'En öppen, leverantörsneutral topside-operatörsplattform för ROV:er — ett cockpit för farkost, kameror, sensorer och positionering. En tidssynkroniserad enhetsplattform förvandlar en hög av fristående hårdvara till en samlad, hot-pluggbar konsol, med navigeringsvarningar, datorseende, uppdragsplanering och fotogrammetri ovanpå. Första målet: Ocean Modules V8 över dess råa länk.',
+    proj6K1: 'Domän', proj6V1: 'Subsea · ROV-drift',
+    proj6K2: 'Stack', proj6V2: 'Rust · Tauri · Tidssynkad enhetsbuss',
+    proj6K3: 'Status', proj6V3: 'Vision · slice 0 i design',
   },
   about: {
     eyebrow: 'Om Anaxiatech',
