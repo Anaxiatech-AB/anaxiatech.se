@@ -137,7 +137,7 @@ export const t: Translations = {
   projects: {
     eyebrow: 'Angränsande arbete',
     heading: 'Andra projekt från labbet.',
-    lede: 'Crackz är den kommersiella produkten. Det här är forsknings- och verktygsarbeten som matar tillbaka in i den — marinarkaeologi, 3D-meshverktyg och andra skräddarsydda system.',
+    lede: 'Våra produkter och pågående utvecklingsarbeten omfattar inspektions-AI, marindata, undervattensoperationer och fältsystem.',
     proj1Status: 'I drift',
     proj1Body: 'Kommersiell källkodsöppen AI-programvara för felavkänning — infrastruktur och tillverkning. Desktop · webb · CLI · Docker.',
     proj1K1: 'Domän', proj1V1: 'Infrastruktur-AI',
@@ -163,11 +163,11 @@ export const t: Translations = {
     proj5K1: 'Domän', proj5V1: 'Subsea survey · Datapipelines',
     proj5K2: 'Stack', proj5V2: 'Python · FastAPI · React · Temporal · PostGIS',
     proj5K3: 'Status', proj5V3: 'Under utveckling',
-    proj6Status: 'Kommer snart',
-    proj6Body: 'En öppen, leverantörsneutral topside-operatörsplattform för ROV:er — ett cockpit för farkost, kameror, sensorer och positionering. En tidssynkroniserad enhetsplattform förvandlar en hög av fristående hårdvara till en samlad, hot-pluggbar konsol, med navigeringsvarningar, datorseende, uppdragsplanering och fotogrammetri ovanpå. Första målet: Ocean Modules V8 över dess råa länk.',
+    proj6Status: 'Under utveckling',
+    proj6Body: 'Styrningsapplikationen i Surface Ops: en fungerande cockpit på ytan för farkosttelemetri, kameraflöden, positionering, enhetshälsa och manuella kontroller. Simulatorstöd och en farkostdrivrutin är byggda; integration på riggen pågår.',
     proj6K1: 'Domän', proj6V1: 'Subsea · ROV-drift',
     proj6K2: 'Stack', proj6V2: 'Rust · Tauri · Tidssynkad enhetsbuss',
-    proj6K3: 'Status', proj6V3: 'Vision · slice 0 i design',
+    proj6K3: 'Status', proj6V3: 'Fungerande cockpit · riggintegration pågår',
   },
   about: {
     eyebrow: 'Om Anaxiatech',

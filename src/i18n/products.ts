@@ -23,15 +23,22 @@ export interface ProductsCopy {
     step5Title: string; step5Body: string;
   };
   together: { eyebrow: string; heading: string; caption: string; surveyAlt: string; crackzAlt: string; surveyCaption: string; crackzCaption: string };
+  surface: {
+    eyebrow: string; heading: string; lede: string;
+    shellLabel: string; shellHeading: string; shellBody: string; shellFeatures: string[];
+    pilotLabel: string; pilotHeading: string; pilotBody: string; pilotFeatures: string[];
+    shellImgAlt: string; shellImgCaption: string;
+    mediaAlt: string; mediaCaption: string; status: string; cta: string;
+  };
   vision: { eyebrow: string; heading: string; body: string; pill: string; cta: string; ctaSecondary: string };
 }
 
 export const strings: Record<'en' | 'sv', ProductsCopy> = {
   en: {
     meta: {
-      title: "AI Slam — Survey Platform | Anaxiatech",
+      title: "Products — AI Slam & Surface Ops | Anaxiatech",
       description:
-        "AI Slam is Anaxiatech's marine survey intelligence platform — Survey Ops catalogs and geolocates every capture; Crackz detects defects at pixel level.",
+        "Explore Anaxiatech products: AI Slam connects Survey Ops and Crackz; Surface Ops brings together subsea operations and the ROV Pilot cockpit.",
     },
     hero: {
       eyebrow: "The vision · AI Slam",
@@ -109,6 +116,25 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
       surveyCaption: "Survey Ops · catalog & geospatial map",
       crackzCaption: "Crackz · defect detection results",
     },
+    surface: {
+      eyebrow: "Subsea operations · Surface Ops",
+      heading: "A working surface platform for the whole mission.",
+      lede: "Surface Ops brings operational views into a configurable desktop workspace. ROV Pilot is its dedicated piloting application. Both are under active development, with working interfaces and device integrations already in place.",
+      shellLabel: "Platform · Surface Ops",
+      shellHeading: "One workspace across the surface team.",
+      shellBody: "The Surface desktop shell arranges telemetry, camera feeds, Photo Ops and network health in dockable panes across multiple displays. Operators can save layouts, monitor alarms and review recorded dives in replay mode.",
+      shellFeatures: ["Dockable, saved multi-display workspaces", "Telemetry, video, Photo Ops and LAN health panes", "Shared alarms and live or replay data"],
+      shellImgAlt: "Illustration of the Surface Ops multi-pane workspace with telemetry, video, Photo Ops and system health",
+      shellImgCaption: "Illustrative interface preview · not a product screenshot",
+      pilotLabel: "Application · ROV Pilot",
+      pilotHeading: "The vehicle cockpit, in one view.",
+      pilotBody: "ROV Pilot brings vehicle telemetry, cameras, positioning and device health into a topside cockpit. A simulator supports development without a rig; the hardware path has a vehicle driver and a developing control interface. Integration and rig validation are ongoing.",
+      pilotFeatures: ["Live telemetry and camera views", "Device status, warnings and control status", "Simulator and hardware integration paths"],
+      mediaAlt: "Illustration of the ROV Pilot cockpit with vehicle status, attitude display and camera panes",
+      mediaCaption: "Illustrative interface preview · not a product screenshot",
+      status: "In active development",
+      cta: "Discuss Surface Ops",
+    },
     vision: {
       eyebrow: "Platform status",
       heading: "An open architecture built to interoperate.",
@@ -121,9 +147,9 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
 
   sv: {
     meta: {
-      title: "AI Slam — Surveyplattform | Anaxiatech",
+      title: "Produkter — AI Slam & Surface Ops | Anaxiatech",
       description:
-        "AI Slam är Anaxiatechs plattform för marin surveyintelligens — Survey Ops katalogiserar och geolokaliserar varje inspelning; Crackz detekterar defekter på pixelnivå.",
+        "Utforska Anaxiatechs produkter: AI Slam kopplar samman Survey Ops och Crackz; Surface Ops samlar undervattensoperationer och ROV Pilots cockpit.",
     },
     hero: {
       eyebrow: "Visionen · AI Slam",
@@ -200,6 +226,25 @@ export const strings: Record<'en' | 'sv', ProductsCopy> = {
         "Crackz detekteringskörning — allvarlighetsgrid med annoterade defektbilder",
       surveyCaption: "Survey Ops · katalog & geospatial karta",
       crackzCaption: "Crackz · defekteringsresultat",
+    },
+    surface: {
+      eyebrow: "Undervattensoperationer · Surface Ops",
+      heading: "En fungerande ytbaserad plattform för hela uppdraget.",
+      lede: "Surface Ops samlar operativa vyer i en anpassningsbar skrivbordsmiljö. ROV Pilot är den dedikerade applikationen för styrning av undervattensfarkosten. Båda utvecklas aktivt och har redan fungerande gränssnitt och enhetsintegrationer.",
+      shellLabel: "Plattform · Surface Ops",
+      shellHeading: "En arbetsyta för teamet på ytan.",
+      shellBody: "Surface samlar telemetri, kameraflöden, Photo Ops och nätverkshälsa i dockningsbara paneler över flera skärmar. Operatören kan spara layouter, bevaka larm och granska inspelade dyk i uppspelningsläge.",
+      shellFeatures: ["Dockningsbara, sparade arbetsytor på flera skärmar", "Paneler för telemetri, video, Photo Ops och nätverkshälsa", "Gemensamma larm och live- eller uppspelningsdata"],
+      shellImgAlt: "Illustration av Surface Ops arbetsyta med paneler för telemetri, video, Photo Ops och systemhälsa",
+      shellImgCaption: "Illustrativ förhandsvisning · inte en skärmbild från produkten",
+      pilotLabel: "Applikation · ROV Pilot",
+      pilotHeading: "Farkostens cockpit i en vy.",
+      pilotBody: "ROV Pilot samlar farkosttelemetri, kameror, positionering och enhetshälsa i en cockpit på ytan. En simulator möjliggör utveckling utan rigg; hårdvaruspåret har en farkostdrivrutin och ett styrgränssnitt under utveckling. Integration och validering på riggen pågår.",
+      pilotFeatures: ["Telemetri och kameravyer i realtid", "Enhetsstatus, varningar och styrstatus", "Simulator och integrationsvägar för hårdvara"],
+      mediaAlt: "Illustration av ROV Pilots cockpit med farkoststatus, lägesvisning och kamerapaneler",
+      mediaCaption: "Illustrativ förhandsvisning · inte en skärmbild från produkten",
+      status: "Under aktiv utveckling",
+      cta: "Prata med oss om Surface Ops",
     },
     vision: {
       eyebrow: "Plattformsstatus",

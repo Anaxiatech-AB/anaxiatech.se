@@ -1953,6 +1953,87 @@ video.proj__shot {
 }
 
 /* ── Products page: vision band status pill ─────────────────── */
+.surface-products {
+  border-top: 1px solid var(--surface-0);
+}
+.surface-feature {
+  border-top: 1px solid var(--surface-0);
+}
+.surface-feature__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 48px;
+  align-items: center;
+}
+.surface-feature .lede { margin: 24px 0; }
+.surface-feature__visuals { display: grid; gap: 16px; }
+.surface-feature__visual {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--surface-0);
+  border-radius: var(--radius-lg);
+  background: var(--bg-mantle);
+  color: var(--fg-3);
+  text-decoration: none;
+}
+.surface-feature__visual img { display: block; width: 100%; height: auto; }
+.surface-feature__visual span {
+  display: block;
+  padding: 14px 18px;
+  font: 11px var(--font-mono);
+  letter-spacing: var(--tracking-wide);
+}
+.surface-products__illustration {
+  margin: 20px 0 0;
+  border: 1px solid var(--surface-0);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.surface-products__illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.surface-products__illustration figcaption {
+  padding: 10px 12px;
+  color: var(--fg-3);
+  font: 11px var(--font-mono);
+}
+.proj__link { color: var(--accent); font-size: 13px; text-decoration: none; }
+.proj__link:hover { text-decoration: underline; }
+.surface-products__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.surface-products__card {
+  padding: 32px;
+  border: 1px solid var(--surface-0);
+  border-radius: var(--radius-lg);
+  background: var(--bg-mantle);
+}
+.surface-products__card h3 {
+  margin: 16px 0;
+  color: var(--fg-1);
+  font-size: 24px;
+}
+.surface-products__card p {
+  color: var(--fg-2);
+  line-height: 1.6;
+}
+.surface-products__card ul {
+  margin: 24px 0 0;
+  padding-left: 20px;
+  color: var(--fg-2);
+  line-height: 1.8;
+}
+.surface-products__card li::marker { color: var(--accent); }
+@media (max-width: 880px) {
+  .surface-feature__grid { grid-template-columns: 1fr; }
+  .surface-products__grid { grid-template-columns: 1fr; }
+}
+
 .vision-pill {
   display: inline-flex;
   align-items: center;

@@ -200,6 +200,45 @@ const t = strings[lang];
   </div>
 </section>
 
+<!-- SURFACE OPS: PLATFORM AND PILOTING APPLICATION -->
+<section id="surface-ops" class="section surface-products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-head__copy">
+        <span class="eyebrow">{t.surface.eyebrow}</span>
+        <h2 class="h2">{t.surface.heading}</h2>
+        <p class="lede">{t.surface.lede}</p>
+      </div>
+      <span class="vision-pill">{t.surface.status}</span>
+    </div>
+    <div class="surface-products__grid">
+      <article class="surface-products__card">
+        <span class="industry__name">{t.surface.shellLabel}</span>
+        <figure class="surface-products__illustration">
+          <img src="/assets/surface-ops-preview.svg" alt={t.surface.shellImgAlt}
+               width="1200" height="720" loading="lazy" decoding="async" />
+          <figcaption>{t.surface.shellImgCaption}</figcaption>
+        </figure>
+        <h3>{t.surface.shellHeading}</h3>
+        <p>{t.surface.shellBody}</p>
+        <ul>{t.surface.shellFeatures.map((feature) => <li>{feature}</li>)}</ul>
+      </article>
+      <article class="surface-products__card">
+        <span class="industry__name">{t.surface.pilotLabel}</span>
+        <figure class="surface-products__illustration">
+          <img src="/assets/rov-pilot-preview.svg" alt={t.surface.mediaAlt}
+               width="1200" height="720" loading="lazy" decoding="async" />
+          <figcaption>{t.surface.mediaCaption}</figcaption>
+        </figure>
+        <h3>{t.surface.pilotHeading}</h3>
+        <p>{t.surface.pilotBody}</p>
+        <ul>{t.surface.pilotFeatures.map((feature) => <li>{feature}</li>)}</ul>
+      </article>
+    </div>
+    <a href={`/${lang}#contact`} class="btn btn--outline">{t.surface.cta}</a>
+  </div>
+</section>
+
 <!-- SECTION 5: VISION BAND -->
 <section class="section section--tight" style="background:var(--bg-mantle);border-top:1px solid var(--surface-0);">
   <div class="wrap">

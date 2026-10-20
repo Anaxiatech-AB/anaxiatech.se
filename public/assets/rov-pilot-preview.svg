@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">ROV Pilot cockpit illustration</title>
+  <desc id="desc">A conceptual topside cockpit with vehicle status, a central attitude display, camera panels and telemetry readouts.</desc>
+  <defs>
+    <radialGradient id="back"><stop stop-color="#10272b"/><stop offset=".7" stop-color="#071116"/><stop offset="1" stop-color="#05090f"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="720" rx="18" fill="url(#back)"/>
+  <rect x="1" y="1" width="1198" height="718" rx="17" fill="none" stroke="#2b4048"/>
+  <path d="M1 57h1198M1 670h1198" stroke="#26363e"/>
+  <circle cx="27" cy="29" r="5" fill="#52d4bd"/>
+  <text x="46" y="35" fill="#e0f1ef" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3">ROV·PILOT</text>
+  <text x="985" y="34" fill="#8cded0" font-family="monospace" font-size="12" letter-spacing="1">COCKPIT CONCEPT</text>
+  <rect x="24" y="76" width="236" height="104" rx="8" fill="#0b141d" stroke="#30424c"/>
+  <text x="42" y="101" fill="#b5a1cb" font-family="monospace" font-size="12" letter-spacing="1">DEVICES</text>
+  <circle cx="46" cy="129" r="4" fill="#53d6bf"/><text x="61" y="134" fill="#bdced0" font-family="monospace" font-size="13">VEHICLE</text><text x="235" y="134" text-anchor="end" fill="#53d6bf" font-family="monospace" font-size="11">SIMULATED</text>
+  <circle cx="46" cy="158" r="4" fill="#6c8191"/><text x="61" y="163" fill="#bdced0" font-family="monospace" font-size="13">PAYLOAD</text><text x="235" y="163" text-anchor="end" fill="#8b9ca8" font-family="monospace" font-size="11">NO DATA</text>
+  <rect x="24" y="195" width="236" height="104" rx="8" fill="#0b141d" stroke="#30424c"/>
+  <text x="42" y="220" fill="#b5a1cb" font-family="monospace" font-size="12" letter-spacing="1">VEHICLE</text>
+  <text x="42" y="251" fill="#9babb3" font-family="monospace" font-size="12">THRUSTERS</text><text x="235" y="251" text-anchor="end" fill="#6f8790" font-family="monospace" font-size="12">—</text>
+  <text x="42" y="278" fill="#9babb3" font-family="monospace" font-size="12">POSITION</text><text x="235" y="278" text-anchor="end" fill="#6f8790" font-family="monospace" font-size="12">—</text>
+  <rect x="24" y="314" width="236" height="71" rx="8" fill="#0b141d" stroke="#30424c"/>
+  <text x="42" y="340" fill="#b5a1cb" font-family="monospace" font-size="12" letter-spacing="1">SYSTEM HEALTH</text>
+  <path d="M43 366h39m13 0h39m13 0h39m13 0h39" stroke="#4bcab9" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+  <rect x="492" y="77" width="216" height="27" rx="5" fill="#16211e" stroke="#8b7650"/>
+  <text x="600" y="96" text-anchor="middle" fill="#d7c39a" font-family="monospace" font-size="13" letter-spacing="3">SIMULATED</text>
+  <path d="M600 162v17m-54 2-5 13m113-13 5 13m-156 19-10 11m214-11 10 11" stroke="#697987" stroke-width="2"/>
+  <path d="M470 275l260-5" stroke="#54ddca" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="600" cy="272" r="7" fill="#57e0cc"/>
+  <path d="M590 183l10-13 10 13" fill="#57e0cc"/>
+  <path d="M557 220h86m-76 25h66m-86 54h106m-79 26h52" stroke="#566d7a" stroke-width="2" stroke-linecap="round"/>
+  <text x="600" y="358" text-anchor="middle" fill="#7ca7a9" font-family="monospace" font-size="12" letter-spacing="2">ATTITUDE / VEHICLE VIEW</text>
+  <path d="M325 170v240M340 170h-15m15 48h-15m15 48h-15m15 48h-15m15 48h-15m15 48h-15" stroke="#597482" opacity=".6"/>
+  <text x="310" y="424" fill="#829aa5" font-family="monospace" font-size="11">DEPTH</text>
+  <path d="M875 170v240m0-240h15m-15 48h15m-15 48h15m-15 48h15m-15 48h15m-15 48h15" stroke="#597482" opacity=".6"/>
+  <text x="894" y="424" fill="#829aa5" font-family="monospace" font-size="11">ALTITUDE</text>
+  <rect x="24" y="496" width="236" height="116" rx="8" fill="#081219" stroke="#30424c"/>
+  <rect x="276" y="496" width="236" height="116" rx="8" fill="#081219" stroke="#30424c"/>
+  <text x="42" y="522" fill="#91a9ae" font-family="monospace" font-size="12">PORT CAMERA</text><text x="294" y="522" fill="#91a9ae" font-family="monospace" font-size="12">STARBOARD CAMERA</text>
+  <text x="142" y="564" text-anchor="middle" fill="#607983" font-family="monospace" font-size="12">VIDEO PANE</text>
+  <text x="394" y="564" text-anchor="middle" fill="#607983" font-family="monospace" font-size="12">VIDEO PANE</text>
+  <rect x="558" y="531" width="614" height="81" rx="8" fill="#111826" stroke="#303f51"/>
+  <g fill="#8596ab" font-family="monospace" font-size="12" text-anchor="middle"><text x="615" y="560">HEADING</text><text x="733" y="560">DEPTH</text><text x="852" y="560">ALTITUDE</text><text x="972" y="560">BUS</text><text x="1095" y="560">DRAW</text></g>
+  <g fill="#d5e4e6" font-family="monospace" font-size="19" text-anchor="middle"><text x="615" y="591">—</text><text x="733" y="591">—</text><text x="852" y="591">—</text><text x="972" y="591">—</text><text x="1095" y="591">—</text></g>
+  <path d="M676 541v61m117-61v61m118-61v61m120-61v61" stroke="#303f51"/>
+  <text x="24" y="694" fill="#7f9a9e" font-family="monospace" font-size="12" letter-spacing="1">ILLUSTRATIVE INTERFACE PREVIEW · NOT A PRODUCT SCREENSHOT</text>
+</svg>

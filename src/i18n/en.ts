@@ -137,7 +137,7 @@ export const t: Translations = {
   projects: {
     eyebrow: 'Adjacent work',
     heading: 'Other projects from the lab.',
-    lede: 'Crackz is the commercial product. These are the research and tooling efforts that feed back into it — marine archaeology, 3D mesh tooling, and other custom systems.',
+    lede: 'Our products and ongoing engineering work span inspection AI, marine data, subsea operations and field systems.',
     proj1Status: 'In production',
     proj1Body: 'Commercial source-available AI defect-detection software — infrastructure and manufacturing. Desktop · web · CLI · Docker.',
     proj1K1: 'Domain', proj1V1: 'Infrastructure AI',
@@ -163,11 +163,11 @@ export const t: Translations = {
     proj5K1: 'Domain', proj5V1: 'Subsea survey · Data pipelines',
     proj5K2: 'Stack', proj5V2: 'Python · FastAPI · React · Temporal · PostGIS',
     proj5K3: 'Status', proj5V3: 'In development',
-    proj6Status: 'Coming soon',
-    proj6Body: 'An open, vendor-neutral topside operator platform for ROVs — one cockpit for the vehicle, cameras, sensors and positioning. A time-synchronized device platform turns a pile of independent hardware into a single, hot-pluggable console, with navigation warnings, computer vision, mission planning and photogrammetry layered on top. First target: the Ocean Modules V8 over its raw link.',
+    proj6Status: 'In development',
+    proj6Body: 'The piloting application in Surface Ops: a working topside cockpit for vehicle telemetry, camera feeds, positioning, device health and manual controls. Simulator support and a vehicle driver are built; rig integration is ongoing.',
     proj6K1: 'Domain', proj6V1: 'Subsea · ROV operations',
     proj6K2: 'Stack', proj6V2: 'Rust · Tauri · Time-synced device bus',
-    proj6K3: 'Status', proj6V3: 'Vision · slice 0 in design',
+    proj6K3: 'Status', proj6V3: 'Working cockpit · rig integration ongoing',
   },
   about: {
     eyebrow: 'About Anaxiatech',
