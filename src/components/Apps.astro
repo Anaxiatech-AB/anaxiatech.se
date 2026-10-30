@@ -1,0 +1,82 @@
+---
+import { strings, scoringStores } from '../i18n/apps';
+interface Props { lang: 'en'; }
+const { lang } = Astro.props;
+const t = strings[lang];
+const s = t.scoring;
+const base = `/${lang}/apps/anaxis-scoring`;
+---
+<header class="hero">
+  <div class="wrap">
+    <div class="hero__copy">
+      <span class="eyebrow">{t.hero.eyebrow}</span>
+      <h1 class="h1 hero__title">{t.hero.title} <span class="accent">{t.hero.titleAccent}</span></h1>
+      <p class="lede hero__lede">{t.hero.lede}</p>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="anaxis-scoring">
+  <div class="wrap">
+    <article class="industry app">
+      <div class="industry__top">
+        <span class="industry__name">{s.eyebrow}</span>
+        <span class="proj__status proj__status--rnd">{s.status}</span>
+      </div>
+      <h2 class="h2">{s.name}</h2>
+      <p class="app__tagline">{s.tagline}</p>
+      <p>{s.body}</p>
+
+      <h4>{s.featuresHeading}</h4>
+      <ul class="app__features">
+        {s.features.map((f) => <li>· {f}</li>)}
+      </ul>
+
+      <h4>{s.storesHeading}</h4>
+      {scoringStores.length > 0 ? (
+        <div class="hero__ctas">
+          {scoringStores.map((store) => (
+            <a href={store.href} class="btn btn--primary" rel="noopener noreferrer">{store.label}</a>
+          ))}
+        </div>
+      ) : (
+        <p class="kicker">{s.storesPending}</p>
+      )}
+
+      <div class="hero__ctas">
+        <a href={`${base}/privacy/`} class="btn btn--ghost">{s.privacyLink}</a>
+        <a href={`${base}/support/`} class="btn btn--ghost">{s.supportLink}</a>
+      </div>
+
+      <div class="app__shots">
+        {s.screenshots.map((shot) => (
+          <img src={shot.src} alt={shot.alt} width="1206" height="2622" loading="lazy" decoding="async" />
+        ))}
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .app { gap: 18px; }
+  .app__tagline { font-size: 18px !important; color: var(--fg-1) !important; }
+  .app__features {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 6px;
+    font-size: 13px; color: var(--fg-2); font-family: var(--font-mono);
+  }
+  .app__shots {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    margin-top: 8px;
+  }
+  .app__shots img {
+    width: 100%; height: auto;
+    /* crop the bottom ~11%: the app's floating nav overlaps the content there */
+    aspect-ratio: 1206 / 2330; object-fit: cover; object-position: top;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--surface-0);
+  }
+  @media (max-width: 720px) {
+    .app__shots { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import { strings, DOCS_ARE_DRAFT, type DocCopy } from '../i18n/apps';
+interface Props { lang: 'en'; doc: 'privacy' | 'support'; }
+const { lang, doc } = Astro.props;
+const t = strings[lang];
+const d: DocCopy = t[doc];
+---
+<header class="hero">
+  <div class="wrap doc">
+    <a href={`/${lang}/apps/#anaxis-scoring`} class="doc__back">{t.doc.back}</a>
+    <span class="eyebrow">{d.eyebrow}</span>
+    <h1 class="h1 hero__title">{d.title}</h1>
+    <p class="lede hero__lede">{d.lede}</p>
+    {d.updated && <p class="kicker">{d.updated}</p>}
+    {DOCS_ARE_DRAFT && <p class="doc__draft" role="note">{t.doc.draftBanner}</p>}
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap doc">
+    {d.sections.map((sec) => (
+      <div class="doc__section">
+        <h2 class="h3">{sec.heading}</h2>
+        {sec.paras?.map((p) => <p>{p}</p>)}
+        {sec.items && <ul>{sec.items.map((i) => <li>{i}</li>)}</ul>}
+        {sec.links && (
+          <ul>
+            {sec.links.map((l) => {
+              const href = l.href.replace('{lang}', lang);
+              return <li><a href={href} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>{l.label}</a></li>;
+            })}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .doc { max-width: 760px; }
+  .doc__draft {
+    margin-top: 16px; padding: 12px 14px;
+    border: 1px solid var(--warning); border-radius: var(--radius-md);
+    color: var(--warning); font-size: 14px;
+  }
+  .doc__back { color: var(--accent); font-size: 14px; display: inline-block; margin-bottom: 16px; }
+  .doc__section { margin-bottom: 28px; }
+  .doc__section p, .doc__section li { color: var(--fg-2); line-height: 1.6; }
+</style>
