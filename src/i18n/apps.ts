@@ -97,8 +97,7 @@ export const strings: Record<'en', AppsCopy> = {
         {
           title: 'Drills and training',
           items: [
-            'Built-in library of 22 common drills, including Bill drill, Blake drill, The dots, The accelerator and Four Aces',
-            'Pro par times for the drills',
+            'Built-in library of 22 common drills (Bill drill, Blake drill, The dots, The accelerator, Four Aces and more), six of them with pro par times',
             'Scores are kept per drill',
           ],
         },
