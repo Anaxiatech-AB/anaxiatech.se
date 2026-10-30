@@ -1,5 +1,5 @@
 ---
-import { strings, scoringStores } from '../i18n/apps';
+import { strings, scoringStores, DOCS_ARE_DRAFT } from '../i18n/apps';
 interface Props { lang: 'en'; }
 const { lang } = Astro.props;
 const t = strings[lang];
@@ -28,9 +28,17 @@ const base = `/${lang}/apps/anaxis-scoring`;
       <p>{s.body}</p>
 
       <h4>{s.featuresHeading}</h4>
-      <ul class="app__features">
-        {s.features.map((f) => <li>· {f}</li>)}
-      </ul>
+      <div class="app__groups">
+        {s.groups.map((g) => (
+          <section class="app__group">
+            <h5>{g.title}</h5>
+            <ul class="app__features">
+              {g.items.map((f) => <li>· {f}</li>)}
+            </ul>
+            {DOCS_ARE_DRAFT && g.confirm && <p class="app__confirm" role="note">{g.confirm}</p>}
+          </section>
+        ))}
+      </div>
 
       <h4>{s.storesHeading}</h4>
       {scoringStores.length > 0 ? (
@@ -65,6 +73,13 @@ const base = `/${lang}/apps/anaxis-scoring`;
     display: flex; flex-direction: column; gap: 6px;
     font-size: 13px; color: var(--fg-2); font-family: var(--font-mono);
   }
+  .app__groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .app__group {
+    border: 1px solid var(--surface-0); border-radius: var(--radius-md);
+    padding: 16px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .app__group h5 { margin: 0; font-size: 16px; font-weight: var(--weight-semi); color: var(--fg-1); }
+  .app__confirm { font-size: 12px !important; color: var(--warning) !important; }
   .app__shots {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
     margin-top: 8px;
@@ -78,5 +93,6 @@ const base = `/${lang}/apps/anaxis-scoring`;
   }
   @media (max-width: 720px) {
     .app__shots { grid-template-columns: repeat(2, 1fr); }
+    .app__groups { grid-template-columns: 1fr; }
   }
 </style>

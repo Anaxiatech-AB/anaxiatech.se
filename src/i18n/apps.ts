@@ -20,7 +20,9 @@ export interface AppsCopy {
   hero: { eyebrow: string; title: string; titleAccent: string; lede: string };
   scoring: {
     eyebrow: string; name: string; status: string; tagline: string; body: string;
-    featuresHeading: string; features: string[];
+    featuresHeading: string;
+    /** `confirm` renders as a visible owner note while DOCS_ARE_DRAFT is true. */
+    groups: { title: string; items: string[]; confirm?: string }[];
     storesHeading: string; storesPending: string;
     privacyLink: string; supportLink: string;
     screenshots: { src: string; alt: string }[];
@@ -48,7 +50,7 @@ export const strings: Record<'en', AppsCopy> = {
   en: {
     meta: {
       title: 'Apps — Anaxis Scoring | Anaxiatech',
-      description: 'Apps from Anaxiatech. Anaxis Scoring is a practical-shooting scoring app for IPSC and USPSA, coming soon in beta.',
+      description: 'Anaxis Scoring is a scoring and training app for IPSC and USPSA practical shooting. Get points, hit factor and accuracy for every run, and track progress drill by drill. Works offline, with optional sync. Coming soon in beta.',
     },
     hero: {
       eyebrow: 'Apps',
@@ -61,14 +63,72 @@ export const strings: Record<'en', AppsCopy> = {
       name: 'Anaxis Scoring',
       status: 'Coming soon / beta',
       tagline: 'Score a stage, understand the run.',
-      body: 'Anaxis Scoring is a scoring app for IPSC and USPSA practical shooting. Enter a shot string, get the points and hit factor, and keep a history you can compare over time. It works fully offline. An account is optional, and signing in syncs your data to a backend.',
+      body: 'Anaxis Scoring is a scoring and training app for IPSC and USPSA practical shooting. Enter a run, get the points, hit factor and accuracy at once, connect a Bluetooth shot timer to capture your split times, and track your progress drill by drill. It works fully offline. An account is optional: sign in to sync your data between your phone and the web app.',
       featuresHeading: 'What it does',
-      features: [
-        'Shot-string entry with points and hit factor',
-        'History of scored runs',
-        'Shooter and weapon profiles',
-        'Drills and stage plans',
-        'Works offline; optional sign-in and sync',
+      groups: [
+        {
+          title: 'Scoring',
+          items: [
+            'Shot-string entry: A, C, D, misses, no-shoots, procedurals and penalties',
+            'IPSC and USPSA, with minor and major power factor',
+            'Points, hit factor and accuracy for every run',
+            'Max points and remaining shots for the stage, with a warning when a run has more shots than the stage allows',
+          ],
+        },
+        {
+          title: 'Shot timer (Bluetooth)',
+          items: [
+            'Connects to the AMG Lab Commander shot timer',
+            'Captures the run time and the individual shot times and splits into the score',
+            'The saved run keeps its timer data for analysis',
+            'Or type the time in by hand',
+            'Support for more timer brands is planned',
+          ],
+          confirm: '[OWNER TO CONFIRM — whether the Bluetooth timer is enabled in the store/TestFlight builds. If not, say "in the beta builds" or move this group to "coming soon".]',
+        },
+        {
+          title: 'Analysis and progress',
+          items: [
+            'Shot analysis of a run: target distribution, and splits when a timer was used',
+            'History grouped by plan and drill',
+            'Progress per drill over time',
+          ],
+        },
+        {
+          title: 'Drills and training',
+          items: [
+            'Built-in library of 22 common drills (Bill drill, Blake drill, The dots, The accelerator, Four Aces and more), six of them with pro par times',
+            'Scores are kept per drill',
+          ],
+        },
+        {
+          title: 'Stage planning',
+          items: [
+            'Plans with stages, target counts, max score and minimum rounds per stage',
+            'For matches and for training',
+          ],
+        },
+        {
+          title: 'Weapons',
+          items: [
+            'Built-in catalog of 40 common firearms with pictures, and growing',
+            'Or add your own weapon with your own photo',
+            'Per-weapon statistics: rounds fired, level, badges and personal bests',
+          ],
+          confirm: '[OWNER TO CONFIRM — catalog pictures: the phone shows the bundled pictures today; pictures we upload reach phones with the next app release.]',
+        },
+        {
+          title: 'Shooters',
+          items: ['Several shooter profiles in one app, for example family or club members sharing a phone'],
+        },
+        {
+          title: 'Your data',
+          items: [
+            'Offline-first: everything is stored on the device',
+            'Optional account: sign in to sync scores, shooters, weapons, plans and drills with a backend, and use the same data in the web app',
+            'Languages: English, Swedish and Spanish',
+          ],
+        },
       ],
       storesHeading: 'Get the app',
       storesPending: 'Store listings (App Store, Google Play, TestFlight) will be linked here when they are available.',
