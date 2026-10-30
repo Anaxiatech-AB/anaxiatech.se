@@ -91,7 +91,7 @@ export const strings: Record<'en', AppsCopy> = {
       },
       eyebrow: 'Anaxis Scoring',
       title: 'Privacy Policy',
-      lede: 'Anaxis Scoring works offline without an account. If you choose to sign in, your data is also stored on our backend so it can sync. This page explains what is stored and where.',
+      lede: 'Anaxis Scoring works offline without an account, in the phone app. If you choose to sign in, your data is also stored on our backend so it can sync, and it is available in the web app. This page explains what is stored and where.',
       updated: 'Last updated: [OWNER TO CONFIRM — date of publication]',
       sections: [
         {
@@ -104,14 +104,14 @@ export const strings: Record<'en', AppsCopy> = {
         {
           heading: 'Without an account',
           paras: [
-            'You can use the app without signing in. Your scoring data, shooter and weapon profiles, stage plans, drills and settings are then stored only on your device, in a local SQLite database. Nothing is sent to us.',
+            'You can use the phone app without signing in. Your scoring data, shooter and weapon profiles, stage plans, drills and settings are then stored only on your device, in a local SQLite database. Nothing is sent to us.',
           ],
         },
         {
           heading: 'Optional account',
           paras: [
             'Signing in is optional. Sign-in uses a standard OpenID Connect login (Keycloak). Accounts are approved by an administrator before they can be used.',
-            'For your account, our server holds your email address, username and display name.',
+            'For your account, our server holds your email address, username, display name, role, whether the account is approved, and whether the email address is verified.',
           ],
         },
         {
@@ -119,13 +119,31 @@ export const strings: Record<'en', AppsCopy> = {
           paras: ['Once you are signed in, the app syncs the following to our backend. The phone also keeps a local copy of everything.'],
           items: [
             'Shooters: names and association',
-            'Scores and shot strings',
+            'Scores and shot strings, including split times from a connected shot timer when one is used',
             'Weapons, including optional photos and catalog id',
             'Stage plans',
             'Drills',
             'Settings: theme and language',
             'A device id',
+            'Licence kind and licence expiry date (entered by an administrator)',
+            'Club or team membership (a label set by an administrator)',
           ],
+        },
+        {
+          heading: 'Administrator records',
+          paras: [
+            'Administrator actions on an account (approve, role change, licence, group change, delete) are logged with the administrator\u2019s username and the time. When an account is deleted, personal fields are removed from the log events about it.',
+          ],
+        },
+        {
+          heading: 'Web app',
+          paras: [
+            'The same account and data are also available in the browser at scoring.anaxiatech.se, not only in the phone app.',
+          ],
+        },
+        {
+          heading: 'Technical logs',
+          paras: ['Our servers keep technical logs (for example IP addresses). [OWNER TO CONFIRM — what is logged and for how long]'],
         },
         {
           heading: 'Where the data is stored',
