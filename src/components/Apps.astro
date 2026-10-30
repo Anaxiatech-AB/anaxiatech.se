@@ -1,5 +1,5 @@
 ---
-import { strings, scoringStores, DOCS_ARE_DRAFT } from '../i18n/apps';
+import { strings, scoringStores } from '../i18n/apps';
 interface Props { lang: 'en'; }
 const { lang } = Astro.props;
 const t = strings[lang];
@@ -35,7 +35,6 @@ const base = `/${lang}/apps/anaxis-scoring`;
             <ul class="app__features">
               {g.items.map((f) => <li>· {f}</li>)}
             </ul>
-            {DOCS_ARE_DRAFT && g.confirm && <p class="app__confirm" role="note">{g.confirm}</p>}
           </section>
         ))}
       </div>
@@ -79,7 +78,6 @@ const base = `/${lang}/apps/anaxis-scoring`;
     padding: 16px; display: flex; flex-direction: column; gap: 10px;
   }
   .app__group h5 { margin: 0; font-size: 16px; font-weight: var(--weight-semi); color: var(--fg-1); }
-  .app__confirm { font-size: 12px !important; color: var(--warning) !important; }
   .app__shots {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
     margin-top: 8px;
