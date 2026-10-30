@@ -50,7 +50,7 @@ const base = `/${lang}/apps/anaxis-scoring`;
 
       <div class="app__shots">
         {s.screenshots.map((shot) => (
-          <img src={shot.src} alt={shot.alt} width="1136" height="2168" loading="lazy" decoding="async" />
+          <img src={shot.src} alt={shot.alt} width="1206" height="2622" loading="lazy" decoding="async" />
         ))}
       </div>
     </article>
@@ -66,11 +66,13 @@ const base = `/${lang}/apps/anaxis-scoring`;
     font-size: 13px; color: var(--fg-2); font-family: var(--font-mono);
   }
   .app__shots {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
     margin-top: 8px;
   }
   .app__shots img {
     width: 100%; height: auto;
+    /* crop the bottom ~11%: the app's floating nav overlaps the content there */
+    aspect-ratio: 1206 / 2330; object-fit: cover; object-position: top;
     border-radius: var(--radius-md);
     border: 1px solid var(--surface-0);
   }

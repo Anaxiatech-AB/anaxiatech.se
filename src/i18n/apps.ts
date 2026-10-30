@@ -43,13 +43,6 @@ export const scoringStores: { label: string; href: string }[] = [];
  */
 export const DOCS_ARE_DRAFT = true;
 
-const shots = [
-  { src: '/assets/apps/anaxis-scoring/calculator.png', alt: '' },
-  { src: '/assets/apps/anaxis-scoring/history.png', alt: '' },
-  { src: '/assets/apps/anaxis-scoring/optimization.png', alt: '' },
-  { src: '/assets/apps/anaxis-scoring/shot-analysis.png', alt: '' },
-];
-
 export const strings: Record<'en' | 'sv', AppsCopy> = {
   en: {
     meta: {
@@ -81,10 +74,9 @@ export const strings: Record<'en' | 'sv', AppsCopy> = {
       privacyLink: 'Privacy policy',
       supportLink: 'Support',
       screenshots: [
-        { ...shots[0], alt: 'Anaxis Scoring calculator screen' },
-        { ...shots[1], alt: 'Anaxis Scoring history screen' },
-        { ...shots[2], alt: 'Anaxis Scoring optimization screen' },
-        { ...shots[3], alt: 'Anaxis Scoring shot analysis screen' },
+        { src: '/assets/apps/anaxis-scoring/en-01-calculator.png', alt: 'Anaxis Scoring calculator: a three-shot run with hit factor 5.31' },
+        { src: '/assets/apps/anaxis-scoring/en-02-history.png', alt: 'Run history grouped by plan and drill, with points and hit factor per run' },
+        { src: '/assets/apps/anaxis-scoring/en-03-shot-analysis.png', alt: 'Shot analysis of a run, with the run advisor and what-if answers' },
       ],
     },
     doc: {
@@ -257,10 +249,9 @@ export const strings: Record<'en' | 'sv', AppsCopy> = {
       privacyLink: 'Integritetspolicy',
       supportLink: 'Support',
       screenshots: [
-        { ...shots[0], alt: 'Anaxis Scoring, kalkylatorvyn' },
-        { ...shots[1], alt: 'Anaxis Scoring, historikvyn' },
-        { ...shots[2], alt: 'Anaxis Scoring, optimeringsvyn' },
-        { ...shots[3], alt: 'Anaxis Scoring, skottanalysvyn' },
+        { src: '/assets/apps/anaxis-scoring/en-01-calculator.png', alt: 'Anaxis Scoring, kalkylatorn: en körning med tre skott och träfffaktor 5.31' },
+        { src: '/assets/apps/anaxis-scoring/en-02-history.png', alt: 'Körhistorik grupperad per plan och övning, med poäng och träfffaktor per körning' },
+        { src: '/assets/apps/anaxis-scoring/en-03-shot-analysis.png', alt: 'Skottanalys av en körning, med rådgivare och vad-händer-om-svar' },
       ],
     },
     doc: {
