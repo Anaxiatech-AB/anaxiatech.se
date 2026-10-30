@@ -40,16 +40,6 @@
   <url>
     <loc>https://anaxiatech.se/en/apps/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/apps/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/apps/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/apps/"/>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://anaxiatech.se/sv/apps/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/apps/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/apps/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/apps/"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -58,16 +48,6 @@
   <url>
     <loc>https://anaxiatech.se/en/apps/anaxis-scoring/privacy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/apps/anaxis-scoring/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/apps/anaxis-scoring/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/apps/anaxis-scoring/privacy/"/>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://anaxiatech.se/sv/apps/anaxis-scoring/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/apps/anaxis-scoring/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/apps/anaxis-scoring/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/apps/anaxis-scoring/privacy/"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -76,16 +56,6 @@
   <url>
     <loc>https://anaxiatech.se/en/apps/anaxis-scoring/support/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/apps/anaxis-scoring/support/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/apps/anaxis-scoring/support/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/apps/anaxis-scoring/support/"/>
-    <lastmod>2026-10-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://anaxiatech.se/sv/apps/anaxis-scoring/support/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://anaxiatech.se/en/apps/anaxis-scoring/support/"/>
-    <xhtml:link rel="alternate" hreflang="sv" href="https://anaxiatech.se/sv/apps/anaxis-scoring/support/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://anaxiatech.se/en/apps/anaxis-scoring/support/"/>
     <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>

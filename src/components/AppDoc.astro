@@ -1,6 +1,6 @@
 ---
 import { strings, DOCS_ARE_DRAFT, type DocCopy } from '../i18n/apps';
-interface Props { lang: 'en' | 'sv'; doc: 'privacy' | 'support'; }
+interface Props { lang: 'en'; doc: 'privacy' | 'support'; }
 const { lang, doc } = Astro.props;
 const t = strings[lang];
 const d: DocCopy = t[doc];
