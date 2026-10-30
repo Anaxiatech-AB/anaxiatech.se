@@ -1,0 +1,10 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import AppDoc from '../../../../../components/AppDoc.astro';
+import { strings } from '../../../../../i18n/apps';
+
+const t = strings['en'];
+---
+<Base title={t.privacy.meta.title} description={t.privacy.meta.description} lang="en">
+  <AppDoc lang="en" doc="privacy" />
+</Base>

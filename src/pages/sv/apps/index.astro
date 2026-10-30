@@ -1,0 +1,10 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Apps from '../../../components/Apps.astro';
+import { strings } from '../../../i18n/apps';
+
+const t = strings['sv'];
+---
+<Base title={t.meta.title} description={t.meta.description} lang="sv">
+  <Apps lang="sv" />
+</Base>
